@@ -42,7 +42,7 @@
 
       try {
         // Enviar os dados para a rota /api/pets via método POST
-        const response = await fetch('localhost:8080/api/pets', {
+        const response = await fetch('http://localhost:8080/api/pets', {
           method: 'POST', // Método da requisição
           headers: {
             'Content-Type': 'application/json' // Tipo de conteúdo
