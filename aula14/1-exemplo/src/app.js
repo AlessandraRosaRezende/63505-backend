@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const usersRouter = require('./routes/users.router');
@@ -16,7 +17,7 @@ mongoose.connect('mongodb+srv://alessandra:coder@clustercoder.n6nab.mongodb.net/
     console.error('Erro ao conectar ao MongoDB', error.message);
   });
 
-app.listen(8080, () => {
-  console.log('Aplicação rodando na porta 8080');
+app.listen(process.env.PORT, () => {
+  console.log(`Aplicação rodando na porta ${process.env.PORT}`);
 });
 
