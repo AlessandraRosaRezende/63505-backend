@@ -1,0 +1,45 @@
+<h1>Formulário de Edição</h1>
+
+<form id="form">
+  <label for="first_name">First Name:</label>
+  <input type="text" id="first_name" name="first_name" value="{{user.first_name}}" required>
+  <br>
+  <label for="last_name">Last Name:</label>
+  <input type="text" id="last_name" name="last_name" value="{{user.last_name}}" required>
+  <br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" value="{{user.email}}" required>
+  <br>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" value="{{user.password}}" required>
+  <br>
+  <button class="edit-button" data-id="{{user._id}}">Update</button>
+</form>
+
+<script>
+  const editButton = document.querySelector('.edit-button');
+
+  editButton.addEventListener('click', async () => {
+    const id = editButton.getAttribute('data-id');
+    console.log("userId", id);
+    
+    const form = new FormData(document.getElementById('form'));
+    try{
+      const response = await fetch(`/user/${id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(Object.fromEntries(form))
+      });
+
+      if (response.ok) {
+        window.location.href = '/list';
+      } else {
+        alert('Erro ao atualizar usuário');
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  });
+</script>

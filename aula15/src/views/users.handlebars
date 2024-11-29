@@ -1,0 +1,44 @@
+<h1>Lista de Usuários:</h1>
+<ul>
+  {{#each users}}
+    <div>
+      <li>{{first_name}} {{last_name}} - {{email}}</li>
+      <button class="edit-button" data-id="{{_id}}">Editar</button>
+      <button class="delete-button" data-id="{{_id}}">Deletar</button>
+    </div>
+  {{/each}}
+</ul>
+<script>
+  const editButtons = document.querySelectorAll('.edit-button');
+  const deleteButtons = document.querySelectorAll('.delete-button');
+
+  editButtons.forEach(button => {
+    button.addEventListener('click', async () => {
+      const userId = button.getAttribute('data-id');
+      window.location.href = `/update/${userId}`;
+    });
+  });
+
+  deleteButtons.forEach(button => {
+    button.addEventListener('click', async () => {
+      const userId = button.getAttribute('data-id');
+      try {
+        const response = await fetch(`/user/${userId}`, {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          alert('Usuário deletado com sucesso');
+          window.location.href = '/list';
+        } else {
+          alert('Erro ao deletar usuário');
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    });
+  });
+</script>

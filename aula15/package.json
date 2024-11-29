@@ -1,0 +1,18 @@
+{
+  "name": "aula15",
+  "version": "1.0.0",
+  "description": "**Fazer uma integração prática de todos os conceitos vistos até aqui, no âmbito do desenvolvimento de um projeto paralelo ao nosso projeto final.**",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "nodemon .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "express-handlebars": "^8.0.1",
+    "mongoose": "^8.8.3"
+  }
+}
