@@ -20,6 +20,10 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true
+  },
+  avatar: { 
+    type: String, 
+    default: '/images/default-avatar.png'  // Caminho para a imagem padrão
   }
 });
 

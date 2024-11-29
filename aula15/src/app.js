@@ -20,6 +20,8 @@ app.set("views", pathView);
 app.use('/', viewsRouter);
 app.use('/user', userRouter);
 
+app.use(express.static(path.join(`${__dirname}/public`)));
+
 // aqui é o nome da database
 mongoose.connect('mongodb+srv://alessandra:coder@clustercoder.n6nab.mongodb.net/usersdb') // informamos a database escola
   .then(() => {

@@ -1,6 +1,6 @@
 <h1>Formulário de Edição</h1>
 
-<form id="form">
+<form id="form" enctype="multipart/form-data">
   <label for="first_name">First Name:</label>
   <input type="text" id="first_name" name="first_name" value="{{user.first_name}}" required>
   <br>
@@ -13,28 +13,29 @@
   <label for="password">Password:</label>
   <input type="password" id="password" name="password" value="{{user.password}}" required>
   <br>
-  <button class="edit-button" data-id="{{user._id}}">Update</button>
+  <label for="avatar">Avatar:</label>
+  <input type="file" id="avatar" name="avatar" accept="image/*">
+  <br>
+  <button type="submit">Update</button>
 </form>
 
 <script>
-  const editButton = document.querySelector('.edit-button');
+  const form = document.getElementById('form');
 
-  editButton.addEventListener('click', async () => {
-    const id = editButton.getAttribute('data-id');
-    console.log("userId", id);
-    
-    const form = new FormData(document.getElementById('form'));
-    try{
-      const response = await fetch(`/user/${id}`, {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault(); // Impede o comportamento padrão do formulário
+
+    const formData = new FormData(form); // Cria o FormData com os dados do formulário
+    const userId = "{{user._id}}";
+
+    try {
+      const response = await fetch(`/user/${userId}`, {
         method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(Object.fromEntries(form))
+        body: formData, // Passa o FormData diretamente
       });
 
       if (response.ok) {
-        window.location.href = '/list';
+        window.location.href = '/list'; // Redireciona para a lista de usuários
       } else {
         alert('Erro ao atualizar usuário');
       }

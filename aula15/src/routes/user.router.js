@@ -1,18 +1,23 @@
 const express = require('express');
 const userModel = require('../models/user.model');
 const userValidation = require('../middleware/user.validation');
+const upload = require('../utils'); // Configuração do multer
 
 const router = express.Router();
 
-router.post('/', userValidation, async (req, res) => {
+router.post('/', upload.single('avatar'), userValidation, async (req, res) => {
+  console.log('Arquivo recebido:', req.file); // Verifica o arquivo recebido
+  console.log('Dados do formulário:', req.body); // Verifica os dados enviados no formulário
   try {
     const { first_name, last_name, email, password } = req.body;
+    const avatar = req.file ? `/images/${req.file.filename}` : '/images/default-avatar.png'; // Caminho do avatar
 
     // const userCreated = await new UserModel({
     //   first_name,
     //   last_name,
     //   email,
-    //   password
+    //   password,
+    //   avatar
     // });
     // userCreated.save();
 
@@ -20,7 +25,8 @@ router.post('/', userValidation, async (req, res) => {
       first_name,
       last_name,
       email,
-      password
+      password,
+      avatar
     });
     return res.render("userCreated", { first_name: userCreated.first_name });
   } catch (error) {
@@ -28,14 +34,17 @@ router.post('/', userValidation, async (req, res) => {
   }
 });
 
-router.put('/:id', userValidation, async (req, res) => {
+router.put('/:id', upload.single('avatar'), userValidation, async (req, res) => {
+  console.log('Arquivo recebido:', req.file); // Verifica o arquivo recebido
+  console.log('Dados do formulário:', req.body); // Verifica os dados enviados no formulário
   try {
     const { id } = req.params;
     const { first_name, last_name, email, password } = req.body;
+    const avatar = req.file ? `/images/${req.file.filename}` : '/images/default-avatar.png'; // Caminho do avatar
 
     const userUpdated = await userModel.updateOne(
       { _id: id }, 
-      { first_name, last_name, email, password }
+      { first_name, last_name, email, password, avatar }
     );
 
     return res.status(200).json(userUpdated);

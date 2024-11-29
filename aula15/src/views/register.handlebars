@@ -1,5 +1,5 @@
 <h1>Formulário de Registro</h1>
-<form action="/user" method="post">
+<form action="/user" method="post" enctype="multipart/form-data">
   <label for="first_name">First Name:</label>
   <input type="text" id="first_name" name="first_name" required>
   <br>
@@ -11,6 +11,9 @@
   <br>
   <label for="password">Password:</label>
   <input type="password" id="password" name="password" required>
+  <br>
+    <label for="avatar">Avatar:</label>
+    <input type="file" id="avatar" name="avatar" accept="image/*">
   <br>
   <button type="submit">Register</button>
 </form>
