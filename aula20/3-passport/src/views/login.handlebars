@@ -24,9 +24,16 @@
     const message = params.get('message');
 
     // Exibe o alerta com SweetAlert
-    Swal.fire({
+    {{!-- Swal.fire({
       icon: message === 'Usuário cadastrado com sucesso' || message === 'Senha alterada com sucesso' ? 'success' : 'error',
       title: message === 'Usuário cadastrado com sucesso' || message === 'Senha alterada com sucesso' ? 'Sucesso' : 'Erro',
+      text: message,
+      confirmButtonText: 'OK'
+    }); --}}
+
+    Swal.fire({
+      icon: ['Usuário registrado com sucesso', 'Senha redefinida com sucesso'].includes(message) ? 'success' : 'error',
+      title: ['Usuário registrado com sucesso', 'Senha redefinida com sucesso'].includes(message) ? 'Sucesso' : 'Erro',
       text: message,
       confirmButtonText: 'OK'
     });
