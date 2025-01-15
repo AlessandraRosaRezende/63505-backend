@@ -1,7 +1,7 @@
 const passport = require("passport");
 const local = require("passport-local");
 const userModel = require("../model/user.model");
-const { createHash, isValidatePassword } = require("../utils/index");
+const { isValidatePassword } = require("../utils/index");
 const jwt = require("passport-jwt");
 const { generateToken } = require("../utils/jwt.utils");
 
@@ -58,7 +58,7 @@ const initializePassport = () => {
             console.log("user", user);
             user = user.map((u) => u.toJSON());
             console.log("user", user);
-            delete user[0].password;
+            delete user[0].password; // SUPER IMPORTANTE
             const accessToken = generateToken(user[0]);
             user[0].token = accessToken;
             console.log("userFinal", user);
