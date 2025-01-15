@@ -1,5 +1,5 @@
+require('dotenv').config();
 const express = require("express");
-
 const handlebars = require("express-handlebars");
 const path = require("path");
 const mongoose = require("mongoose");
@@ -32,7 +32,7 @@ app.use(express.static(path.join(`${__dirname}/public`)));
 app.use(
   session({
     store: MongoStore.create({
-      mongoUrl: "mongodb+srv://alessandra:coder@clustercoder.n6nab.mongodb.net/coder",
+      mongoUrl: process.env.MONGO_URL,
       mongoOptions: { useNewUrlParser: true, useUnifiedTopology: true },
       ttl: 600,
     }),
@@ -51,7 +51,7 @@ app.use('/session', sessionRouter);
 app.use("/user", userRouter);
 
 // aqui é o nome da database
-mongoose.connect('mongodb+srv://alessandra:coder@clustercoder.n6nab.mongodb.net/coder') // informamos a database escola
+mongoose.connect(process.env.MONGO_URL) // informamos a database escola
   .then(() => {
     console.log('Conectado ao MongoDB com sucesso');
   }).catch((error) => {
