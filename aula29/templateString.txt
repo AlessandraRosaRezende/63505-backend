@@ -1,0 +1,33 @@
+Exemplo real onde template literals são melhores:
+
+Suponha que você esteja criando uma mensagem personalizada para um usuário, incluindo seu nome, idade e um cálculo baseado na idade:
+
+Copyconst nome = "Maria";
+const idade = 25;
+
+// Usando template literals
+const mensagem = `Olá, ${nome}! Daqui a 5 anos, você terá ${idade + 5} anos.`;
+console.log(mensagem);
+// Saída: "Olá, Maria! Daqui a 5 anos, você terá 30 anos."
+
+Agora, com concatenação manual:
+
+Copyconst nome = "Maria";
+const idade = 25;
+
+// Usando concatenação manual
+const mensagem = "Olá, " + nome + "! Daqui a 5 anos, você terá " + (idade + 5) + " anos.";
+console.log(mensagem);
+// Saída: "Olá, Maria! Daqui a 5 anos, você terá 30 anos."
+
+Neste caso, o template literal é claramente mais legível e fácil de manter, especialmente quando há cálculos ou lógica envolvida dentro da string.
+
+Legibilidade:
+No exemplo com template literals, a string é mais fácil de ler e entender, pois as variáveis são inseridas diretamente no texto.
+No exemplo com concatenação manual, a string fica fragmentada, o que pode dificultar a leitura, especialmente em textos longos ou com muitas variáveis.
+Manutenção:
+Com template literals, é mais fácil modificar a string, pois você só precisa alterar o texto e as variáveis dentro de ${}.
+Com concatenação manual, qualquer alteração no texto ou na ordem das variáveis exige mais cuidado para garantir que os operadores + estejam corretamente posicionados.
+Flexibilidade:
+Template literals permitem a inclusão de expressões JavaScript diretamente dentro da string, como ${idade + 5} para calcular a idade daqui a 5 anos.
+Com concatenação manual, você precisaria calcular o valor fora da string e depois inseri-lo, o que pode tornar o código mais verboso.
