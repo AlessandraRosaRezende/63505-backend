@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const nodemailer = require('nodemailer');
+const twilio = require('twilio');
 
 const app = express();
 
@@ -12,6 +13,8 @@ const transport = nodemailer.createTransport({
     pass: process.env.PASSWORD
   }
 });
+
+const client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_ACCOUNT_TOKEN);
 
 const mailJuan = 'juanpedro_0@hotmail.com';
 const mailLeticia = 'leticiaschiavon20@gmail.com';
@@ -40,6 +43,17 @@ app.get('/mail', async (req, res) => {
   });
   return res.send({ status: "success", result: 'email sent' });
 })
+
+app.get('/sms', async (req, res) => {
+  const { name, product } = req.query;
+  let result = await client.messages.create({
+    to: '+5531992782642',
+    from: process.env.TWILIO_SMS_NUMBER,
+    // body: 'Teste de envio de SMS pelo Node.js'
+    body: `Obrigado, ${name}! Seu pedido de ${product} foi recebido com sucesso!`
+  });
+  return res.send({ status: "success", result: `sms sent: ${result.body}` });
+});
 
 app.listen(8080, () => {
   console.log('Server is running on port 8080');
