@@ -1,0 +1,665 @@
+{
+  "status": 200,
+  "payload": [
+    {
+      "name": "Kaylin",
+      "last_name": "Jaskolski",
+      "gender": "Trans man",
+      "birthDate": "2024-08-09T21:32:47.541Z",
+      "phone": "500-527-4694 x927",
+      "image": "https://avatars.githubusercontent.com/u/39541900",
+      "email": "Bella92@hotmail.com",
+      "role": "cliente",
+      "isPremium": false,
+      "jobTitle": "National Identity Architect",
+      "id": "bc1769c4c5534ea26c0dfdde",
+      "products": [
+        {
+          "name": "Refined Granite Tuna",
+          "price": "777.89",
+          "department": "Sports",
+          "stock": 71,
+          "image": "https://picsum.photos/seed/FEnpv/2622/2849",
+          "code": "RpEmo449",
+          "description": "Discover the black new Chicken with an exciting mix of Aluminum ingredients",
+          "id": "eb18a2fe52da581b39295cf5"
+        },
+        {
+          "name": "Intelligent Bamboo Chair",
+          "price": "522.79",
+          "department": "Sports",
+          "stock": 40,
+          "image": "https://picsum.photos/seed/IUCH1q/1154/3052",
+          "code": "lWMZrplr",
+          "description": "Fresh Salad designed with Marble for nice performance",
+          "id": "4e07dbd0d6f79bfce42ad7fe"
+        },
+        {
+          "name": "Gorgeous Marble Shoes",
+          "price": "792.19",
+          "department": "Jewelry",
+          "stock": 5,
+          "image": "https://loremflickr.com/2750/3177?lock=6750704854287852",
+          "code": "1kVHWB0s",
+          "description": "The ivory Chips combines Ghana aesthetics with Curium-based durability",
+          "id": "dcc38f2e0fcbac94ca2a42be"
+        },
+        {
+          "name": "Refined Plastic Gloves",
+          "price": "465.49",
+          "department": "Books",
+          "stock": 35,
+          "image": "https://loremflickr.com/1337/2141?lock=6692313686003232",
+          "code": "LORMfLUf",
+          "description": "Discover the crocodile-like agility of our Tuna, perfect for grizzled users",
+          "id": "e8c1d506e7522c5b3f367424"
+        }
+      ]
+    },
+    {
+      "name": "Arnold",
+      "last_name": "Ernser",
+      "gender": "Androgynous",
+      "birthDate": "2024-07-20T15:59:22.810Z",
+      "phone": "(919) 623-6753 x170",
+      "image": "https://avatars.githubusercontent.com/u/13576049",
+      "email": "Katlynn.Feeney33@hotmail.com",
+      "role": "cliente",
+      "isPremium": true,
+      "jobTitle": "Direct Configuration Architect",
+      "id": "7df2326ad47bacffd9ff73ee",
+      "products": [
+        {
+          "name": "Handcrafted Granite Sausages",
+          "price": "174.97",
+          "department": "Shoes",
+          "stock": 64,
+          "image": "https://loremflickr.com/1657/1179?lock=8325436211629764",
+          "code": "Mf01AgS4",
+          "description": "Our squirrel-friendly Chips ensures oblong comfort for your pets",
+          "id": "983359f9857d8ed27890411d"
+        },
+        {
+          "name": "Modern Concrete Cheese",
+          "price": "711.33",
+          "department": "Movies",
+          "stock": 35,
+          "image": "https://loremflickr.com/2443/3910?lock=980985865152976",
+          "code": "5pLevxee",
+          "description": "Discover the fox-like agility of our Chicken, perfect for white users",
+          "id": "7ecd3ebef1cdacc7f612860f"
+        },
+        {
+          "name": "Soft Cotton Hat",
+          "price": "730.39",
+          "department": "Home",
+          "stock": 91,
+          "image": "https://picsum.photos/seed/9MA0cGXwVh/3600/357",
+          "code": "eBuawfog",
+          "description": "Discover the shark-like agility of our Bike, perfect for adolescent users",
+          "id": "f3444db7fe5eae8fb9faab8e"
+        }
+      ]
+    },
+    {
+      "name": "Geovanny",
+      "last_name": "Keebler",
+      "gender": "Woman",
+      "birthDate": "2024-09-01T07:15:17.301Z",
+      "phone": "710.360.0422 x764",
+      "image": "https://avatars.githubusercontent.com/u/62237441",
+      "email": "Elouise_Toy@yahoo.com",
+      "role": "cliente",
+      "isPremium": true,
+      "jobTitle": "Product Functionality Agent",
+      "id": "df4f068f5f8bfd1e034f4fdb",
+      "products": [
+        {
+          "name": "Awesome Gold Car",
+          "price": "397.29",
+          "department": "Clothing",
+          "stock": 78,
+          "image": "https://picsum.photos/seed/kqpNro/759/369",
+          "code": "xkN4TyZx",
+          "description": "New Bacon model with 75 GB RAM, 870 GB storage, and sunny features",
+          "id": "b5dfebbb9866ddcbe3db11be"
+        },
+        {
+          "name": "Tasty Marble Soap",
+          "price": "561.49",
+          "department": "Shoes",
+          "stock": 53,
+          "image": "https://loremflickr.com/1674/3047?lock=5781362162289650",
+          "code": "H6YDSWG5",
+          "description": "Discover the actual new Gloves with an exciting mix of Granite ingredients",
+          "id": "cc7aecde3dbe83f16ffc4ffc"
+        }
+      ]
+    },
+    {
+      "name": "Orlando",
+      "last_name": "Brekke",
+      "gender": "Two-spirit",
+      "birthDate": "2025-08-10T10:42:35.368Z",
+      "phone": "729.315.4980 x59831",
+      "image": "https://avatars.githubusercontent.com/u/34074333",
+      "email": "Shirley.Prosacco81@yahoo.com",
+      "role": "vendedor",
+      "isPremium": true,
+      "jobTitle": "Dynamic Data Orchestrator",
+      "id": "f4eab70edfefe0b6ede1afbe",
+      "products": [
+        {
+          "name": "Elegant Plastic Table",
+          "price": "40.54",
+          "department": "Toys",
+          "stock": 61,
+          "image": "https://picsum.photos/seed/M8sjvjxZy/1621/312",
+          "code": "QsJUqHs8",
+          "description": "Innovative Pants featuring honored technology and Cotton construction",
+          "id": "0aeb3e8bc03f60e83bbef068"
+        },
+        {
+          "name": "Handmade Plastic Ball",
+          "price": "84.49",
+          "department": "Clothing",
+          "stock": 64,
+          "image": "https://picsum.photos/seed/H0nof6/3476/3930",
+          "code": "x2IzYDZE",
+          "description": "Boyle Group's most advanced Chips technology increases flashy capabilities",
+          "id": "02813fdcabbbbdefbdfd6c2e"
+        },
+        {
+          "name": "Oriental Concrete Fish",
+          "price": "271.59",
+          "department": "Shoes",
+          "stock": 6,
+          "image": "https://loremflickr.com/301/1056?lock=6346197498974991",
+          "code": "XBCjWxqY",
+          "description": "Featuring Neodymium-enhanced technology, our Chair offers unparalleled inexperienced performance",
+          "id": "28096c3a4eed0777af4ade3a"
+        },
+        {
+          "name": "Incredible Silk Sausages",
+          "price": "256.59",
+          "department": "Baby",
+          "stock": 60,
+          "image": "https://picsum.photos/seed/mR7TSfscL9/3046/357",
+          "code": "ttd8gvyv",
+          "description": "Stylish Pants designed to make you stand out with unripe looks",
+          "id": "8db4bc55c83baf635d3a87ce"
+        },
+        {
+          "name": "Handcrafted Concrete Bacon",
+          "price": "817.59",
+          "department": "Home",
+          "stock": 60,
+          "image": "https://picsum.photos/seed/mjIHdPUF/2547/228",
+          "code": "2qRCe4FO",
+          "description": "Discover the dog-like agility of our Ball, perfect for dramatic users",
+          "id": "adcb6f81fc48be9a71c969cf"
+        },
+        {
+          "name": "Unbranded Cotton Pizza",
+          "price": "203.28",
+          "department": "Garden",
+          "stock": 57,
+          "image": "https://picsum.photos/seed/YIMq6OWEql/271/3146",
+          "code": "HB72ma9K",
+          "description": "Stylish Bike designed to make you stand out with warlike looks",
+          "id": "b6aa3a28aeccc74d76dde5d2"
+        },
+        {
+          "name": "Handmade Plastic Cheese",
+          "price": "706.19",
+          "department": "Beauty",
+          "stock": 81,
+          "image": "https://loremflickr.com/1766/3959?lock=4437928356658774",
+          "code": "UXr95Vdk",
+          "description": "The purple Chips combines Iraq aesthetics with Cadmium-based durability",
+          "id": "dffb33be154ac7ccc625fe3a"
+        },
+        {
+          "name": "Elegant Rubber Car",
+          "price": "793.65",
+          "department": "Computers",
+          "stock": 81,
+          "image": "https://loremflickr.com/3745/615?lock=4271095277727844",
+          "code": "yMhjuKGA",
+          "description": "New Bacon model with 9 GB RAM, 696 GB storage, and warped features",
+          "id": "abedafc944ceca2a2fd612f8"
+        }
+      ]
+    },
+    {
+      "name": "Madelyn",
+      "last_name": "McCullough",
+      "gender": "Transsexual male",
+      "birthDate": "2025-07-12T21:32:38.877Z",
+      "phone": "1-992-489-2285 x579",
+      "image": "https://avatars.githubusercontent.com/u/60621550",
+      "email": "Reid14@yahoo.com",
+      "role": "cliente",
+      "isPremium": false,
+      "jobTitle": "Future Creative Supervisor",
+      "id": "dddab5266edf0f7bad2128ad",
+      "products": [
+        {
+          "name": "Elegant Aluminum Table",
+          "price": "466.19",
+          "department": "Clothing",
+          "stock": 44,
+          "image": "https://picsum.photos/seed/Ml2YkLPUO/3886/494",
+          "code": "a289aMIs",
+          "description": "New Chair model with 36 GB RAM, 489 GB storage, and early features",
+          "id": "366ab3b4bd2b22cd1f0dcccd"
+        },
+        {
+          "name": "Recycled Bamboo Mouse",
+          "price": "590.75",
+          "department": "Home",
+          "stock": 71,
+          "image": "https://picsum.photos/seed/wFdxW/2087/690",
+          "code": "5At1ijIg",
+          "description": "Our squirrel-friendly Pizza ensures scientific comfort for your pets",
+          "id": "c6617493fb3efd2b20dc8cf2"
+        },
+        {
+          "name": "Fantastic Rubber Computer",
+          "price": "397.80",
+          "department": "Sports",
+          "stock": 71,
+          "image": "https://loremflickr.com/764/2342?lock=4276008751740053",
+          "code": "m1PahlEQ",
+          "description": "New Shirt model with 18 GB RAM, 195 GB storage, and subdued features",
+          "id": "2a7decd2a6fa0afae898a3b9"
+        }
+      ]
+    },
+    {
+      "name": "Vena",
+      "last_name": "Reinger",
+      "gender": "Demiflux",
+      "birthDate": "2025-01-12T07:32:19.582Z",
+      "phone": "(257) 235-7089 x012",
+      "image": "https://avatars.githubusercontent.com/u/93170410",
+      "email": "Marlee.Bechtelar@yahoo.com",
+      "role": "vendedor",
+      "isPremium": false,
+      "jobTitle": "Senior Interactions Orchestrator",
+      "id": "da7ad2e70ac100bfd9afd2fc",
+      "products": [
+        {
+          "name": "Handmade Bamboo Pants",
+          "price": "574.59",
+          "department": "Kids",
+          "stock": 100,
+          "image": "https://picsum.photos/seed/ki8coY/2587/3895",
+          "code": "3jaKyEA9",
+          "description": "Savor the golden essence in our Car, designed for fat culinary adventures",
+          "id": "4b3f6e6ad0b61c71d1becfec"
+        },
+        {
+          "name": "Incredible Rubber Car",
+          "price": "383.79",
+          "department": "Grocery",
+          "stock": 43,
+          "image": "https://loremflickr.com/1789/466?lock=3808214307529257",
+          "code": "At1asJlc",
+          "description": "Discover the other new Mouse with an exciting mix of Metal ingredients",
+          "id": "ec63ea57fe42d43c62b9516d"
+        },
+        {
+          "name": "Oriental Steel Towels",
+          "price": "161.99",
+          "department": "Baby",
+          "stock": 48,
+          "image": "https://loremflickr.com/1665/532?lock=1988703821060839",
+          "code": "50Ae3cRj",
+          "description": "Our panda-friendly Tuna ensures lost comfort for your pets",
+          "id": "d8baebced4e9c5e069b15b8c"
+        },
+        {
+          "name": "Modern Concrete Ball",
+          "price": "984.39",
+          "department": "Grocery",
+          "stock": 75,
+          "image": "https://loremflickr.com/2244/3725?lock=3289658363217142",
+          "code": "QSWyrk6R",
+          "description": "Savor the bitter essence in our Car, designed for quixotic culinary adventures",
+          "id": "c6340b3fbdd7e2ebcd88aaaf"
+        },
+        {
+          "name": "Gorgeous Silk Table",
+          "price": "904.01",
+          "department": "Grocery",
+          "stock": 80,
+          "image": "https://loremflickr.com/1757/2210?lock=8049642394182157",
+          "code": "ZEIBt1Mr",
+          "description": "New indigo Car with ergonomic design for repentant comfort",
+          "id": "b9fbcbdaba3e4fe0c13aa7ff"
+        },
+        {
+          "name": "Small Cotton Shirt",
+          "price": "999.15",
+          "department": "Movies",
+          "stock": 84,
+          "image": "https://loremflickr.com/2012/1615?lock=8416878797203767",
+          "code": "JaUwjJUr",
+          "description": "Stamm - Berge's most advanced Hat technology increases selfish capabilities",
+          "id": "c27da69c5d51db007c128ddb"
+        },
+        {
+          "name": "Licensed Silk Ball",
+          "price": "421.80",
+          "department": "Outdoors",
+          "stock": 32,
+          "image": "https://picsum.photos/seed/d8E1bIf/3680/3605",
+          "code": "XGx2zqcB",
+          "description": "The tan Bacon combines Latvia aesthetics with Bohrium-based durability",
+          "id": "0c2bb11ea1cb99fb72dadb27"
+        },
+        {
+          "name": "Intelligent Plastic Fish",
+          "price": "558.95",
+          "department": "Industrial",
+          "stock": 1,
+          "image": "https://loremflickr.com/3682/67?lock=2831981480855033",
+          "code": "DCf04iW8",
+          "description": "Ergonomic Pizza made with Aluminum for all-day mild support",
+          "id": "7ffe6f0b6ced29c77a4aecc6"
+        }
+      ]
+    },
+    {
+      "name": "Natalia",
+      "last_name": "Kessler",
+      "gender": "Two-spirit person",
+      "birthDate": "2024-08-19T19:27:54.193Z",
+      "phone": "1-604-815-6313 x257",
+      "image": "https://avatars.githubusercontent.com/u/83191650",
+      "email": "Herbert.Schulist6@gmail.com",
+      "role": "cliente",
+      "isPremium": true,
+      "jobTitle": "Chief Accountability Director",
+      "id": "f2ee3ef4c7b8fb7ad4fbd767",
+      "products": [
+        {
+          "name": "Rustic Aluminum Ball",
+          "price": "772.79",
+          "department": "Home",
+          "stock": 76,
+          "image": "https://picsum.photos/seed/TBMBD6V/1115/3788",
+          "code": "65Fft4wo",
+          "description": "Innovative Mouse featuring colorful technology and Ceramic construction",
+          "id": "3c1a70faca2c04acbbcf60cf"
+        },
+        {
+          "name": "Fresh Aluminum Salad",
+          "price": "932.95",
+          "department": "Jewelry",
+          "stock": 76,
+          "image": "https://loremflickr.com/774/2922?lock=8018614225520216",
+          "code": "RrRSNJAH",
+          "description": "Our polar bear-friendly Chicken ensures sparse comfort for your pets",
+          "id": "dcbaffdbf4187d57622e56ce"
+        },
+        {
+          "name": "Bespoke Plastic Chair",
+          "price": "46.05",
+          "department": "Baby",
+          "stock": 64,
+          "image": "https://loremflickr.com/1621/298?lock=3472394499210343",
+          "code": "BFOO1Bad",
+          "description": "Our salty-inspired Cheese brings a taste of luxury to your stale lifestyle",
+          "id": "4ae7af113a9b9b1ad9a57a2f"
+        }
+      ]
+    },
+    {
+      "name": "Brycen",
+      "last_name": "Keeling",
+      "gender": "Transsexual female",
+      "birthDate": "2026-02-01T18:08:46.389Z",
+      "phone": "1-873-269-3346 x689",
+      "image": "https://avatars.githubusercontent.com/u/8795327",
+      "email": "Rosie_Beahan44@gmail.com",
+      "role": "cliente",
+      "isPremium": false,
+      "jobTitle": "Senior Markets Agent",
+      "id": "f3b2b9d8ce5fab1c3c04cea6",
+      "products": [
+        {
+          "name": "Recycled Aluminum Hat",
+          "price": "484.99",
+          "department": "Music",
+          "stock": 23,
+          "image": "https://picsum.photos/seed/34cYfm/772/3151",
+          "code": "zKGbjBoS",
+          "description": "Discover the bat-like agility of our Bike, perfect for giving users",
+          "id": "0c34dba7bf34a4f5dbfcf4ca"
+        },
+        {
+          "name": "Elegant Wooden Chips",
+          "price": "621.85",
+          "department": "Computers",
+          "stock": 27,
+          "image": "https://picsum.photos/seed/ROz2V/3827/3751",
+          "code": "ymv0Z3g8",
+          "description": "Our salty-inspired Ball brings a taste of luxury to your ambitious lifestyle",
+          "id": "f9f1e9e0dadcae1bb6d9cd12"
+        },
+        {
+          "name": "Frozen Silk Towels",
+          "price": "534.69",
+          "department": "Shoes",
+          "stock": 55,
+          "image": "https://loremflickr.com/3204/1489?lock=8687980504263765",
+          "code": "T4ynQLbA",
+          "description": "Featuring Praseodymium-enhanced technology, our Table offers unparalleled sad performance",
+          "id": "df084152cfcf2af2ae5409b7"
+        },
+        {
+          "name": "Frozen Gold Chair",
+          "price": "131.65",
+          "department": "Computers",
+          "stock": 5,
+          "image": "https://loremflickr.com/3944/1696?lock=7187371157126555",
+          "code": "yMDiRec0",
+          "description": "Professional-grade Sausages perfect for advanced training and recreational use",
+          "id": "5d9acfdf7faaddccce080bf9"
+        },
+        {
+          "name": "Unbranded Wooden Hat",
+          "price": "958.39",
+          "department": "Books",
+          "stock": 19,
+          "image": "https://picsum.photos/seed/HiAuyv/122/3848",
+          "code": "N0KwwkIx",
+          "description": "Experience the grey brilliance of our Pizza, perfect for ordinary environments",
+          "id": "de4407f0ca68eb3c78dbc8f6"
+        },
+        {
+          "name": "Sleek Bronze Gloves",
+          "price": "698.50",
+          "department": "Toys",
+          "stock": 48,
+          "image": "https://picsum.photos/seed/2odmqBR0dG/3909/2488",
+          "code": "4w5THdJM",
+          "description": "The sleek and babyish Car comes with grey LED lighting for smart functionality",
+          "id": "34d7ed75eacda4706dddd69d"
+        },
+        {
+          "name": "Awesome Ceramic Gloves",
+          "price": "696.15",
+          "department": "Sports",
+          "stock": 48,
+          "image": "https://loremflickr.com/3549/522?lock=3002273796191719",
+          "code": "5wnL72nS",
+          "description": "Rustic Chicken designed with Marble for sick performance",
+          "id": "e87545ce1c5cbdd2437cf5ba"
+        },
+        {
+          "name": "Handmade Rubber Pizza",
+          "price": "453.49",
+          "department": "Home",
+          "stock": 78,
+          "image": "https://picsum.photos/seed/gKfYe3WMP/3211/447",
+          "code": "YBVXtv0P",
+          "description": "Our salty-inspired Fish brings a taste of luxury to your defensive lifestyle",
+          "id": "2ac0f5c3870e010ad0d0bc4d"
+        }
+      ]
+    },
+    {
+      "name": "Shyanne",
+      "last_name": "Klocko-Abshire",
+      "gender": "Pangender",
+      "birthDate": "2025-10-02T13:49:47.971Z",
+      "phone": "(447) 866-9896",
+      "image": "https://avatars.githubusercontent.com/u/95089493",
+      "email": "Edward.Kling@gmail.com",
+      "role": "vendedor",
+      "isPremium": false,
+      "jobTitle": "Investor Data Assistant",
+      "id": "2a9dce0cdcacffce92cca0c3",
+      "products": [
+        {
+          "name": "Frozen Steel Pants",
+          "price": "405.60",
+          "department": "Books",
+          "stock": 91,
+          "image": "https://loremflickr.com/117/934?lock=1447207831970333",
+          "code": "J6AjGxTX",
+          "description": "The sleek and splendid Gloves comes with magenta LED lighting for smart functionality",
+          "id": "d44bbb921e24bdd6fbc8dcde"
+        },
+        {
+          "name": "Refined Granite Shirt",
+          "price": "895.69",
+          "department": "Games",
+          "stock": 53,
+          "image": "https://loremflickr.com/1551/3048?lock=680865009178724",
+          "code": "8Wsv6i3e",
+          "description": "Experience the salmon brilliance of our Ball, perfect for shady environments",
+          "id": "a9a1efdcb2b4ba6f5137e0a5"
+        },
+        {
+          "name": "Elegant Concrete Tuna",
+          "price": "67.09",
+          "department": "Outdoors",
+          "stock": 46,
+          "image": "https://picsum.photos/seed/KVwncce/503/93",
+          "code": "heR0xqPN",
+          "description": "New grey Pizza with ergonomic design for total comfort",
+          "id": "f2b8bea0bc8abebbe40fc691"
+        },
+        {
+          "name": "Licensed Aluminum Bike",
+          "price": "382.75",
+          "department": "Automotive",
+          "stock": 84,
+          "image": "https://loremflickr.com/1340/1489?lock=21840383874117",
+          "code": "EBK3LERo",
+          "description": "Professional-grade Table perfect for major training and recreational use",
+          "id": "3bfbc73d5efb0a2e8d0b5ed0"
+        },
+        {
+          "name": "Incredible Silk Hat",
+          "price": "890.40",
+          "department": "Movies",
+          "stock": 63,
+          "image": "https://picsum.photos/seed/IByCc1/1162/648",
+          "code": "teqBW7gJ",
+          "description": "The Self-enabling methodical alliance Sausages offers reliable performance and both design",
+          "id": "06fb1cf82d2a22742b96b44e"
+        }
+      ]
+    },
+    {
+      "name": "Giovani",
+      "last_name": "Swaniawski",
+      "gender": "Demigender",
+      "birthDate": "2024-12-08T04:02:20.906Z",
+      "phone": "1-437-977-6459 x588",
+      "image": "https://avatars.githubusercontent.com/u/6357864",
+      "email": "Tina_Effertz49@gmail.com",
+      "role": "cliente",
+      "isPremium": true,
+      "jobTitle": "Legacy Program Administrator",
+      "id": "d2d88bea88d2cbf6c49bcfa2",
+      "products": [
+        {
+          "name": "Awesome Rubber Gloves",
+          "price": "229.55",
+          "department": "Grocery",
+          "stock": 27,
+          "image": "https://loremflickr.com/870/2261?lock=851398224317057",
+          "code": "h9it5SQG",
+          "description": "Savor the sweet essence in our Bacon, designed for pastel culinary adventures",
+          "id": "1b6ec9d1d356d4fcb31b1eec"
+        },
+        {
+          "name": "Frozen Silk Fish",
+          "price": "581.89",
+          "department": "Movies",
+          "stock": 72,
+          "image": "https://loremflickr.com/1749/3714?lock=52448797952426",
+          "code": "2JetwMN4",
+          "description": "Professional-grade Pants perfect for flawed training and recreational use",
+          "id": "b5cc6e0e250d454af510baab"
+        },
+        {
+          "name": "Intelligent Silk Keyboard",
+          "price": "733.19",
+          "department": "Shoes",
+          "stock": 69,
+          "image": "https://picsum.photos/seed/AxGLr2/2448/3720",
+          "code": "KSqajIs2",
+          "description": "New Towels model with 2 GB RAM, 889 GB storage, and sugary features",
+          "id": "8cfcb4a7350cfabc7a9eee6c"
+        },
+        {
+          "name": "Incredible Silk Hat",
+          "price": "490.85",
+          "department": "Books",
+          "stock": 10,
+          "image": "https://loremflickr.com/2712/1541?lock=5415269513616494",
+          "code": "IEBmy6BD",
+          "description": "Introducing the Egypt-inspired Tuna, blending rural style with local craftsmanship",
+          "id": "5ac5d92df9713ae8ce3b7e2d"
+        },
+        {
+          "name": "Fantastic Metal Hat",
+          "price": "704.15",
+          "department": "Industrial",
+          "stock": 81,
+          "image": "https://picsum.photos/seed/ZLOpdx/2236/1168",
+          "code": "fDAtbxic",
+          "description": "Innovative Pizza featuring cavernous technology and Silk construction",
+          "id": "d34404f7afed3a4eadf3ab7f"
+        },
+        {
+          "name": "Small Granite Bacon",
+          "price": "42.19",
+          "department": "Grocery",
+          "stock": 81,
+          "image": "https://loremflickr.com/3833/1216?lock=2507977261970375",
+          "code": "zmkZjXUD",
+          "description": "New Salad model with 96 GB RAM, 764 GB storage, and outlying features",
+          "id": "05ac842b99eec8dddaac1ecc"
+        },
+        {
+          "name": "Recycled Metal Mouse",
+          "price": "868.69",
+          "department": "Tools",
+          "stock": 32,
+          "image": "https://picsum.photos/seed/Tp4lJ/3987/62",
+          "code": "Phg0pBkA",
+          "description": "Professional-grade Car perfect for insecure training and recreational use",
+          "id": "211e6d44ee09dcb41021f3b4"
+        }
+      ]
+    }
+  ]
+}
