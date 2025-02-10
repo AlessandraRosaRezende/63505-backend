@@ -1,0 +1,14 @@
+<h1>Lista de Alunos</h1>
+    <ul>
+        {{#each alunos}}
+            <li>Nome: {{first_name}} {{last_name}} - Email: {{email}} - Gênero: {{gender}} - Nota: {{grade}} - Grupo: {{group}}</li>
+        {{/each}}
+    </ul>
+
+    <p>Página {{page}} de {{totalPages}}</p>
+    {{#if prevPage}}
+        <a href="/students?page={{prevPage}}">Anterior</a>
+    {{/if}}
+    {{#if nextPage}}
+        <a href="/students?page={{nextPage}}">Próxima</a>
+    {{/if}}

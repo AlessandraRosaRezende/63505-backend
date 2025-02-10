@@ -1,0 +1,14 @@
+{
+  "name": "calculaidade",
+  "version": "1.0.0",
+  "description": "calculadora de idade com moment",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Alessandra",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.30.1"
+  }
+}
