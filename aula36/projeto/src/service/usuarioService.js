@@ -7,7 +7,8 @@ const criarUsuario = async (dadosUsuario) => {
 };
 
 const gerarUsuarios = async () => {
-    for (let i = 0; i < 10; i++) {
+    
+    for (let i = 11; i < 21; i++) {
         const usuario = new Usuario({ nome: `Usuario${i}`, email: `usuario${i}@exemplo.com` });
         await usuario.save();
     }
