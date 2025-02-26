@@ -1,0 +1,517 @@
+{
+  "status": 200,
+  "payload": [
+    {
+      "name": "Lori",
+      "last_name": "Harber",
+      "gender": "Agender",
+      "birthDate": "2025-04-28T14:41:01.042Z",
+      "phone": "636.741.7123 x1745",
+      "image": "https://avatars.githubusercontent.com/u/54698392",
+      "email": "Lewis.Roberts@yahoo.com",
+      "id": "bdb57dcd72b161aab1c8c9cf",
+      "products": [
+        {
+          "name": "Ergonomic Cotton Hat",
+          "price": "198.79",
+          "department": "Music",
+          "stock": 61,
+          "image": "https://loremflickr.com/606/999?lock=1425669274746980",
+          "id": "9a9b8f4baa0fa9a2acc7af81"
+        }
+      ]
+    },
+    {
+      "name": "Imelda",
+      "last_name": "Schowalter",
+      "gender": "Demi-girl",
+      "birthDate": "2024-04-28T07:42:15.885Z",
+      "phone": "1-406-552-5985 x1984",
+      "image": "https://avatars.githubusercontent.com/u/53058062",
+      "email": "Maximillian14@yahoo.com",
+      "id": "17bb653edb20a9c357ef40ad",
+      "products": [
+        {
+          "name": "Ergonomic Marble Table",
+          "price": "575.29",
+          "department": "Jewelry",
+          "stock": 96,
+          "image": "https://picsum.photos/seed/vZOMC/3213/416",
+          "id": "491c3adb5ff6501d2e6655c4"
+        }
+      ]
+    },
+    {
+      "name": "Angelica",
+      "last_name": "Simonis",
+      "gender": "Agender",
+      "birthDate": "2024-04-01T12:05:03.132Z",
+      "phone": "733.404.3847 x8628",
+      "image": "https://avatars.githubusercontent.com/u/10602855",
+      "email": "Josue_Keeling26@hotmail.com",
+      "id": "e1ebff0d6bef17bef8e537ff",
+      "products": [
+        {
+          "name": "Soft Ceramic Chips",
+          "price": "731.59",
+          "department": "Garden",
+          "stock": 20,
+          "image": "https://picsum.photos/seed/49eZHqC/3452/3635",
+          "id": "4c1bfb39cbebdacf7c4e382a"
+        },
+        {
+          "name": "Handcrafted Plastic Ball",
+          "price": "712.99",
+          "department": "Grocery",
+          "stock": 56,
+          "image": "https://loremflickr.com/1888/3715?lock=7419336164267133",
+          "id": "7e3488f0d1dec8509880fe91"
+        },
+        {
+          "name": "Licensed Granite Mouse",
+          "price": "45.99",
+          "department": "Beauty",
+          "stock": 96,
+          "image": "https://loremflickr.com/3873/192?lock=6185863949422365",
+          "id": "db5f74912f3c6dadbd09bedc"
+        },
+        {
+          "name": "Fresh Bronze Shoes",
+          "price": "901.29",
+          "department": "Sports",
+          "stock": 52,
+          "image": "https://loremflickr.com/1645/2683?lock=6432344504057719",
+          "id": "ff0e97765cbcfdebe26532ac"
+        },
+        {
+          "name": "Unbranded Gold Tuna",
+          "price": "935.49",
+          "department": "Beauty",
+          "stock": 35,
+          "image": "https://loremflickr.com/1580/2115?lock=2805047197738307",
+          "id": "bfa811b7b46ceae0f0502c16"
+        },
+        {
+          "name": "Incredible Marble Ball",
+          "price": "155.99",
+          "department": "Games",
+          "stock": 98,
+          "image": "https://loremflickr.com/2296/2943?lock=7813420721778050",
+          "id": "37ebcdafda4bd53e5cfec009"
+        },
+        {
+          "name": "Practical Cotton Bacon",
+          "price": "461.29",
+          "department": "Jewelry",
+          "stock": 82,
+          "image": "https://picsum.photos/seed/kp4zHvkEFs/136/2065",
+          "id": "f874ce13cf31abf6481a36a0"
+        },
+        {
+          "name": "Fresh Granite Computer",
+          "price": "158.09",
+          "department": "Sports",
+          "stock": 10,
+          "image": "https://loremflickr.com/3571/3893?lock=3827950652120087",
+          "id": "78313f28e07c06b80aea53ea"
+        }
+      ]
+    },
+    {
+      "name": "Angus",
+      "last_name": "Schoen",
+      "gender": "Male to female",
+      "birthDate": "2024-10-14T01:14:35.182Z",
+      "phone": "(878) 453-0154 x8244",
+      "image": "https://avatars.githubusercontent.com/u/8207324",
+      "email": "Jerrod76@hotmail.com",
+      "id": "39676cffd85d3355d04057f0",
+      "products": [
+        {
+          "name": "Licensed Plastic Shoes",
+          "price": "324.39",
+          "department": "Electronics",
+          "stock": 60,
+          "image": "https://loremflickr.com/1221/334?lock=3776285053629292",
+          "id": "9bdafd3e3d8330f21c7e7aed"
+        },
+        {
+          "name": "Gorgeous Cotton Table",
+          "price": "90.59",
+          "department": "Jewelry",
+          "stock": 60,
+          "image": "https://picsum.photos/seed/gUzsN5qm/1543/3926",
+          "id": "08efb9e70d15f12d00d5ec59"
+        },
+        {
+          "name": "Frozen Ceramic Soap",
+          "price": "841.35",
+          "department": "Outdoors",
+          "stock": 56,
+          "image": "https://loremflickr.com/1870/1842?lock=346923802024622",
+          "id": "cf73eaaaefde36f8d3b7ee73"
+        },
+        {
+          "name": "Frozen Ceramic Ball",
+          "price": "798.95",
+          "department": "Toys",
+          "stock": 24,
+          "image": "https://loremflickr.com/1258/2427?lock=834867386418421",
+          "id": "1dabcbd15a1a4bcfdf941580"
+        },
+        {
+          "name": "Handcrafted Bamboo Mouse",
+          "price": "896.19",
+          "department": "Outdoors",
+          "stock": 13,
+          "image": "https://picsum.photos/seed/uOSVcPuMRL/2529/3498",
+          "id": "dc55adb58fa5207aeecd3be2"
+        },
+        {
+          "name": "Ergonomic Marble Sausages",
+          "price": "210.35",
+          "department": "Sports",
+          "stock": 4,
+          "image": "https://loremflickr.com/3875/1406?lock=7801603399536313",
+          "id": "9ad404bdb20cec2d8c3ee6de"
+        },
+        {
+          "name": "Incredible Aluminum Cheese",
+          "price": "656.39",
+          "department": "Garden",
+          "stock": 32,
+          "image": "https://loremflickr.com/1251/3889?lock=3514304932603147",
+          "id": "dc070a685cedd6ffe81caf54"
+        },
+        {
+          "name": "Sleek Gold Shoes",
+          "price": "700.09",
+          "department": "Toys",
+          "stock": 36,
+          "image": "https://loremflickr.com/401/297?lock=8777514792759238",
+          "id": "e15f2c1f40edbbbc67fbb5fb"
+        },
+        {
+          "name": "Practical Concrete Towels",
+          "price": "501.76",
+          "department": "Shoes",
+          "stock": 13,
+          "image": "https://loremflickr.com/1907/2767?lock=3321789861008730",
+          "id": "c31cbbb4a8f29f19443b2be2"
+        }
+      ]
+    },
+    {
+      "name": "Kale",
+      "last_name": "Ortiz",
+      "gender": "Male to female transgender woman",
+      "birthDate": "2024-08-15T06:34:24.024Z",
+      "phone": "977-755-9313 x5256",
+      "image": "https://avatars.githubusercontent.com/u/84693572",
+      "email": "Delilah_Christiansen11@gmail.com",
+      "id": "0b2fc9fe47c3b2c64cfaece3",
+      "products": [
+        {
+          "name": "Luxurious Granite Hat",
+          "price": "966.39",
+          "department": "Kids",
+          "stock": 31,
+          "image": "https://loremflickr.com/1261/1714?lock=6117913942661736",
+          "id": "32ea43f9ae123fa8f803cbdc"
+        },
+        {
+          "name": "Refined Wooden Shirt",
+          "price": "240.79",
+          "department": "Jewelry",
+          "stock": 35,
+          "image": "https://loremflickr.com/2385/1777?lock=6802286546938676",
+          "id": "3aaa0cfef146bdba3b82e8d0"
+        },
+        {
+          "name": "Tasty Cotton Bacon",
+          "price": "29.55",
+          "department": "Music",
+          "stock": 14,
+          "image": "https://picsum.photos/seed/Goa6MIw/1228/857",
+          "id": "94af3dc7a060da2b883aaac6"
+        },
+        {
+          "name": "Unbranded Steel Pizza",
+          "price": "831.65",
+          "department": "Shoes",
+          "stock": 88,
+          "image": "https://picsum.photos/seed/MR44gQ/3790/3600",
+          "id": "7cd9c94fa824974bddcab0de"
+        },
+        {
+          "name": "Small Plastic Gloves",
+          "price": "970.19",
+          "department": "Electronics",
+          "stock": 94,
+          "image": "https://picsum.photos/seed/ko6rFynvwl/2905/2996",
+          "id": "de2abbddd2c6eddbce191aeb"
+        },
+        {
+          "name": "Rustic Bronze Pizza",
+          "price": "473.49",
+          "department": "Baby",
+          "stock": 23,
+          "image": "https://picsum.photos/seed/PtYssHZ6ot/1446/855",
+          "id": "c7b0c42eee4d8b9effd5bfe3"
+        },
+        {
+          "name": "Gorgeous Concrete Bike",
+          "price": "298.95",
+          "department": "Jewelry",
+          "stock": 19,
+          "image": "https://loremflickr.com/2915/1793?lock=2908501206144026",
+          "id": "cebb4bbafcaaa704b416adfe"
+        },
+        {
+          "name": "Unbranded Metal Table",
+          "price": "454.90",
+          "department": "Beauty",
+          "stock": 88,
+          "image": "https://loremflickr.com/3802/3025?lock=5993223829852679",
+          "id": "d9db2d8c7e7dac9c1aca254c"
+        },
+        {
+          "name": "Handmade Bronze Computer",
+          "price": "110.15",
+          "department": "Automotive",
+          "stock": 71,
+          "image": "https://loremflickr.com/2/1316?lock=3259690072783225",
+          "id": "afd3abc6d9a56fe4a00d12d5"
+        }
+      ]
+    },
+    {
+      "name": "Camryn",
+      "last_name": "Trantow",
+      "gender": "T* man",
+      "birthDate": "2024-10-02T08:11:15.085Z",
+      "phone": "283.647.0346",
+      "image": "https://avatars.githubusercontent.com/u/70942585",
+      "email": "Francis_Halvorson71@hotmail.com",
+      "id": "adbfbfed9ec4c432c0910ecf",
+      "products": [
+        {
+          "name": "Luxurious Rubber Car",
+          "price": "548.54",
+          "department": "Garden",
+          "stock": 40,
+          "image": "https://picsum.photos/seed/8SuFoYXb/229/2408",
+          "id": "aa2b66debfa53ccc7e4ba71b"
+        },
+        {
+          "name": "Awesome Bronze Car",
+          "price": "599.30",
+          "department": "Books",
+          "stock": 27,
+          "image": "https://loremflickr.com/2277/22?lock=2802245427870424",
+          "id": "9e0defec0e129d6fea8db6e2"
+        }
+      ]
+    },
+    {
+      "name": "Carmine",
+      "last_name": "Bosco",
+      "gender": "Intersex",
+      "birthDate": "2024-08-04T09:48:14.632Z",
+      "phone": "(978) 250-0487 x48785",
+      "image": "https://avatars.githubusercontent.com/u/83611459",
+      "email": "Laverna_Bode47@yahoo.com",
+      "id": "de482871e4511540cf468e68",
+      "products": [
+        {
+          "name": "Unbranded Steel Table",
+          "price": "106.60",
+          "department": "Automotive",
+          "stock": 67,
+          "image": "https://picsum.photos/seed/i78CLTDCJ/3441/2405",
+          "id": "0dbcbbc3cce663fce0bc7d27"
+        },
+        {
+          "name": "Generic Bronze Pizza",
+          "price": "709.95",
+          "department": "Tools",
+          "stock": 38,
+          "image": "https://picsum.photos/seed/gch9DB/3589/3771",
+          "id": "d6bbf977a951ea448be9d5ef"
+        },
+        {
+          "name": "Rustic Cotton Salad",
+          "price": "166.93",
+          "department": "Movies",
+          "stock": 82,
+          "image": "https://picsum.photos/seed/PXoRGnGO/1837/3485",
+          "id": "b2ff1e644b099ee0f1eaa472"
+        },
+        {
+          "name": "Fantastic Wooden Computer",
+          "price": "374.95",
+          "department": "Shoes",
+          "stock": 39,
+          "image": "https://loremflickr.com/2252/137?lock=7104970339757004",
+          "id": "4d214e0efd4d16a3e1cfc3e9"
+        },
+        {
+          "name": "Fantastic Cotton Computer",
+          "price": "984.19",
+          "department": "Automotive",
+          "stock": 63,
+          "image": "https://picsum.photos/seed/LIgW0UTY/1045/2054",
+          "id": "b69c0bdf9f5550613dd3acb5"
+        },
+        {
+          "name": "Fresh Silk Mouse",
+          "price": "113.19",
+          "department": "Jewelry",
+          "stock": 71,
+          "image": "https://picsum.photos/seed/EqgVFY5/416/391",
+          "id": "1b4df69ab1cdefeddb7c1bde"
+        },
+        {
+          "name": "Oriental Steel Cheese",
+          "price": "310.69",
+          "department": "Garden",
+          "stock": 83,
+          "image": "https://picsum.photos/seed/LZtuoTYASd/2172/1136",
+          "id": "bcba6abca3cd64ea1629cb96"
+        },
+        {
+          "name": "Gorgeous Granite Soap",
+          "price": "470.95",
+          "department": "Shoes",
+          "stock": 33,
+          "image": "https://loremflickr.com/2643/2724?lock=6492758851205750",
+          "id": "ebc4ec72b8d4aa4dfb96536f"
+        }
+      ]
+    },
+    {
+      "name": "Lucy",
+      "last_name": "Fadel",
+      "gender": "Omnigender",
+      "birthDate": "2025-03-12T18:44:30.949Z",
+      "phone": "(500) 608-8165 x5186",
+      "image": "https://avatars.githubusercontent.com/u/20587536",
+      "email": "Janessa23@gmail.com",
+      "id": "cf0badbbdd2a4683b7f0bcb2",
+      "products": [
+        {
+          "name": "Sleek Wooden Sausages",
+          "price": "64.85",
+          "department": "Music",
+          "stock": 1,
+          "image": "https://loremflickr.com/983/1988?lock=6324027039110671",
+          "id": "cf54b71f09dbdb1da17d1fbf"
+        }
+      ]
+    },
+    {
+      "name": "Orrin",
+      "last_name": "Renner",
+      "gender": "Female to male transsexual man",
+      "birthDate": "2025-07-13T01:05:34.558Z",
+      "phone": "(445) 492-9587 x9238",
+      "image": "https://avatars.githubusercontent.com/u/44068194",
+      "email": "Vito_Fadel73@yahoo.com",
+      "id": "7eb3509dcfdebe244ad8eeaa",
+      "products": [
+        {
+          "name": "Refined Plastic Towels",
+          "price": "107.45",
+          "department": "Music",
+          "stock": 42,
+          "image": "https://picsum.photos/seed/FyNWGK/3401/1582",
+          "id": "5be1e7f541c921ef95a6dc2b"
+        },
+        {
+          "name": "Oriental Bronze Salad",
+          "price": "135.79",
+          "department": "Shoes",
+          "stock": 18,
+          "image": "https://picsum.photos/seed/x0MfOjY6/1770/3477",
+          "id": "e79bee6ecff27a3ca9c2ec4c"
+        },
+        {
+          "name": "Handmade Gold Salad",
+          "price": "30.25",
+          "department": "Games",
+          "stock": 14,
+          "image": "https://loremflickr.com/481/3660?lock=1879560086671326",
+          "id": "cddccffecd5ee6750a17aaea"
+        },
+        {
+          "name": "Modern Granite Soap",
+          "price": "239.80",
+          "department": "Sports",
+          "stock": 49,
+          "image": "https://loremflickr.com/3363/605?lock=8289353730924592",
+          "id": "ca0ddfefeeedcabbfca51d0a"
+        },
+        {
+          "name": "Sleek Concrete Tuna",
+          "price": "301.25",
+          "department": "Movies",
+          "stock": 38,
+          "image": "https://picsum.photos/seed/f0VUyswR/3356/3502",
+          "id": "0f0eb2cc8badcc4df57f7088"
+        },
+        {
+          "name": "Recycled Granite Chair",
+          "price": "693.65",
+          "department": "Electronics",
+          "stock": 41,
+          "image": "https://loremflickr.com/1086/2687?lock=1495184316918183",
+          "id": "36b2fc7ffedb9d28ac5dd4eb"
+        },
+        {
+          "name": "Handmade Aluminum Soap",
+          "price": "932.66",
+          "department": "Sports",
+          "stock": 93,
+          "image": "https://loremflickr.com/1968/884?lock=4841923891381247",
+          "id": "ef7a6e5916d2e1ad6f7ead36"
+        },
+        {
+          "name": "Electronic Metal Salad",
+          "price": "582.90",
+          "department": "Tools",
+          "stock": 53,
+          "image": "https://loremflickr.com/3236/1125?lock=6442002679078333",
+          "id": "1dd77fcccb5b199f5a108a6b"
+        },
+        {
+          "name": "Fresh Steel Keyboard",
+          "price": "523.65",
+          "department": "Health",
+          "stock": 42,
+          "image": "https://loremflickr.com/3449/3821?lock=7824906986946182",
+          "id": "b842fd690795fccd6ffc1cd3"
+        }
+      ]
+    },
+    {
+      "name": "Minerva",
+      "last_name": "Heidenreich",
+      "gender": "Man",
+      "birthDate": "2025-04-02T02:09:53.689Z",
+      "phone": "378-507-1516",
+      "image": "https://avatars.githubusercontent.com/u/77601479",
+      "email": "Kristian76@yahoo.com",
+      "id": "9fb0b6bb7cc181d8db6cfd20",
+      "products": [
+        {
+          "name": "Small Silk Car",
+          "price": "80.89",
+          "department": "Grocery",
+          "stock": 5,
+          "image": "https://loremflickr.com/1679/1111?lock=7392271064589144",
+          "id": "16b5bca51f6aaa3afa01dfac"
+        }
+      ]
+    }
+  ]
+}
