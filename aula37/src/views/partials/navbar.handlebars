@@ -1,0 +1,11 @@
+<nav>
+  <a href="/">Home</a>
+  <a href="/products">Produtos</a>
+  {{#if user}}
+  <a href="/profile">Perfil</a>
+  <a href="/auth/logout">Logout</a>
+  {{else}}
+  <a href="/login">Login</a>
+  <a href="/register">Registrar</a>
+  {{/if}}
+</nav>
