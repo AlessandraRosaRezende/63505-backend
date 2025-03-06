@@ -1,8 +1,19 @@
 const Product = require('../models/Product');
 const User = require('../models/User');
+const jwt = require('jsonwebtoken');
 
 const renderHome = (req, res) => {
-  res.render('home', { title: 'Home' });
+  const token = req.cookies.token;
+  if (token) {
+    try {
+      const decoded = jwt.verify(token, process.env.JWT_SECRET);
+      res.render('home', { title: 'Home', user: decoded });
+    } catch (error) {
+      res.render('home', { title: 'Home', user: null });
+    }
+  } else {
+    res.render('home', { title: 'Home', user: null });
+  }
 };
 
 const renderLogin = (req, res) => {

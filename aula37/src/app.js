@@ -22,6 +22,17 @@ app.engine('handlebars', handlebars.engine({
     allowProtoPropertiesByDefault: true,
     allowProtoMethodsByDefault: true,
   },
+  helpers: {
+    or: function (a, b) {
+      return a || b;
+    },
+    eq: function (a, b) {
+      return a === b;
+    },
+    isAdmin: function (user) {
+      return user && user.role === 'admin';
+    }
+  },
 }));
 app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));

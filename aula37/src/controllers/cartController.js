@@ -29,7 +29,7 @@ const addToCart = async (req, res) => {
 const getCart = async (req, res) => {
   try {
     const userId = req.user.id;
-    const user = req.user.role;
+    const user = req.user;
     const cart = await Cart.findOne({ user: userId }).populate('items.product');
     res.render('cart', { cart, title: 'Carrinho', user });
   } catch (error) {

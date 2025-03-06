@@ -1,0 +1,31 @@
+<h1>Lista de Usuários</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Função</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each users}}
+    <tr>
+      <td>{{this.name}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.role}}</td>
+      <td>
+        <form action="/users/premium/{{this._id}}?_method=PUT" method="post">
+          <button type="submit">
+            {{#if (eq this.role 'user')}}
+            Tornar Premium
+            {{else}}
+            Tornar Usuário
+            {{/if}}
+          </button>
+        </form>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
