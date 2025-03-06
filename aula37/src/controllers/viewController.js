@@ -28,6 +28,18 @@ const renderProducts = async (req, res) => {
   }
 };
 
+const renderCarts = async (req, res) => {
+  try {
+    const userId = req.user.id;
+    const user = req.user;
+    const cart = await Cart.findOne({ user: userId }).populate('items.product');
+    const isAdminOrPremium = user && (user.role === 'admin' || user.role === 'premium');
+    res.render('cart', { cart, title: 'Carrinho', user: user, isAdminOrPremium: isAdminOrPremium });
+  } catch (error) {
+    res.status(500).send('Erro ao buscar carrinho');
+  }
+};
+
 const renderProfile = async (req, res) => {
   try {
     const user = await User.findById(req.user.id);
@@ -52,4 +64,5 @@ module.exports = {
   renderProducts,
   renderProfile,
   renderForgotPassword,
+  renderCarts,
 };

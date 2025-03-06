@@ -6,6 +6,7 @@ const {
   renderRegister,
   renderResetPassword,
   renderProducts,
+  renderCarts,
   renderProfile,
   renderForgotPassword,
 } = require('../controllers/viewController');
@@ -15,7 +16,8 @@ router.get('/', renderHome);
 router.get('/login', renderLogin);
 router.get('/register', renderRegister);
 router.get('/reset-password/:token', renderResetPassword);
-router.get('/products', renderProducts);
+router.get('/products', authMiddleware, renderProducts);
+router.get('/cart', authMiddleware, renderCarts);
 router.get('/profile', authMiddleware, renderProfile);
 router.get('/forgot-password', renderForgotPassword);
 router.get('/forgot-password-success', (req, res) => {

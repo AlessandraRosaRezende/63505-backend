@@ -6,6 +6,7 @@ const authRoutes = require('./routes/authRoutes');
 const productRoutes = require('./routes/productRoutes');
 const userRoutes = require('./routes/userRoutes');
 const viewRoutes = require('./routes/viewRoutes');
+const cartRoutes = require('./routes/cartRoutes');
 const path = require('path');
 const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser');
@@ -34,6 +35,7 @@ app.use(express.urlencoded({ extended: true }));
 // Rotas
 app.use('/auth', authRoutes);
 app.use('/products', productRoutes);
+app.use('/cart', cartRoutes);
 app.use('/users', userRoutes);
 app.use('/', viewRoutes);
 

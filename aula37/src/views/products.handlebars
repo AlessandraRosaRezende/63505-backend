@@ -4,18 +4,56 @@
 <a href="/products/add">Adicionar Produto</a>
 {{/if}}
 {{/if}}
-<ul>
-  {{#each products}}
-  <li>
-    {{this.name}} - Preço: {{this.price}}
-    {{#if ../user}}
-    {{#if ../isAdminOrPremium}}
-    <a href="/products/edit/{{this._id}}">Editar</a>
-    <form action="/products/{{this._id}}?_method=DELETE" method="post" style="display: inline;">
-      <button type="submit">Excluir</button>
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Preço</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each products}}
+    <tr>
+      <td>{{this.name}}</td>
+      <td>R$ {{this.price}},00</td>
+      <td>
+        {{#if ../user}}
+        <button onclick="openModal('{{this._id}}')">Adicionar ao Carrinho</button>
+        {{/if}}
+        {{#if ../isAdminOrPremium}}
+        <a href="/products/edit/{{this._id}}">Editar</a>
+        <form action="/products/{{this._id}}?_method=DELETE" method="post" style="display: inline;">
+          <button type="submit">Excluir</button>
+        </form>
+        {{/if}}
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+<div id="quantityModal"
+  style="display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4);">
+  <div style="background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 30%;">
+    <span onclick="closeModal()"
+      style="color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+    <form id="addToCartForm" action="/cart/add" method="post">
+      <input type="hidden" name="productId" id="modalProductId">
+      <label for="quantity">Quantidade:</label>
+      <input type="number" name="quantity" id="quantity" value="1" min="1">
+      <button type="submit">Adicionar</button>
     </form>
-    {{/if}}
-    {{/if}}
-  </li>
-  {{/each}}
-</ul>
+  </div>
+</div>
+
+<script>
+  function openModal(productId) {
+    document.getElementById('modalProductId').value = productId;
+    document.getElementById('quantityModal').style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById('quantityModal').style.display = "none";
+  }
+</script>

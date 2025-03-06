@@ -1,8 +1,9 @@
 <nav>
   <a href="/">Home</a>
-  <a href="/products">Produtos</a>
-  {{#if user}}
+  {{#if user }}
   <a href="/profile">Perfil</a>
+  <a href="/products">Produtos</a>
+  <a href="/cart">Carrinho</a> 
   <a href="/auth/logout">Logout</a>
   {{else}}
   <a href="/login">Login</a>

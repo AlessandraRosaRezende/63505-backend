@@ -5,7 +5,7 @@ const { authMiddleware, premiumMiddleware, adminMiddleware } = require('../middl
 const methodOverride = require('method-override');
 
 router.use(methodOverride('_method'));
-router.get('/', authMiddleware, getProducts); // Aplique o authMiddleware aqui
+router.get('/', authMiddleware, getProducts);
 router.get('/add', authMiddleware, premiumMiddleware, renderAddProduct);
 router.post('/', authMiddleware, premiumMiddleware, createProduct);
 router.get('/edit/:id', authMiddleware, premiumMiddleware, renderEditProduct);
