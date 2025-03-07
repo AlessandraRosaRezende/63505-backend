@@ -1,0 +1,17 @@
+{
+  "name": "aula12",
+  "version": "1.0.0",
+  "description": "#### O que é um banco de dados?",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "nodemon .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "multer": "^1.4.5-lts.1"
+  }
+}
