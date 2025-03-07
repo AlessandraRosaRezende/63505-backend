@@ -1,4 +1,5 @@
 const Cart = require('../models/Cart');
+const Product = require('../models/Product');
 
 const addToCart = async (req, res) => {
   try {
@@ -30,12 +31,33 @@ const getCart = async (req, res) => {
   try {
     const userId = req.user.id;
     const user = req.user;
-    const cart = await Cart.findOne({ user: userId }).populate('items.product');
-    res.render('cart', { cart, title: 'Carrinho', user });
+    let cart = await Cart.findOne({ user: userId }).populate('items.product');
+    const isAdminOrPremium = user && (user.role === 'admin' || user.role === 'premium');
+
+    if (!cart) {
+      return res.render('cart', { cart: null, title: 'Carrinho', user, isAdminOrPremium });
+    }
+
+    // Verifica se os produtos ainda existem
+    const validItems = [];
+    for (const item of cart.items) {
+      if (item.product) { // Adiciona esta verificação
+        const product = await Product.findById(item.product._id);
+        if (product) {
+          validItems.push(item);
+        }
+      }
+    }
+
+    cart.items = validItems;
+    await cart.save();
+    res.render('cart', { cart, title: 'Carrinho', user, isAdminOrPremium });
   } catch (error) {
+    console.log(error);
     res.status(500).send('Erro ao buscar carrinho');
   }
 };
+
 
 const updateQuantity = async (req, res) => {
   try {

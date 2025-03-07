@@ -1,7 +1,7 @@
 <h1>Produtos</h1>
 {{#if user}}
 {{#if isAdminOrPremium}}
-<a href="/products/add">Adicionar Produto</a>
+  <a href="/products/add">Adicionar Produto</a>
 {{/if}}
 {{/if}}
 <table>
@@ -22,10 +22,10 @@
         <button onclick="openModal('{{this._id}}')">Adicionar ao Carrinho</button>
         {{/if}}
         {{#if ../isAdminOrPremium}}
-        <a href="/products/edit/{{this._id}}">Editar</a>
-        <form action="/products/{{this._id}}?_method=DELETE" method="post" style="display: inline;">
-          <button type="submit">Excluir</button>
-        </form>
+          <a href="/products/edit/{{this._id}}">Editar</a>
+          <form action="/products/{{this._id}}?_method=DELETE" method="post" style="display: inline;">
+            <button type="submit">Excluir</button>
+          </form>
         {{/if}}
       </td>
     </tr>

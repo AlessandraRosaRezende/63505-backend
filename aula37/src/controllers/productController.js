@@ -61,16 +61,18 @@ const getProducts = async (req, res) => {
 };
 
 const renderAddProduct = (req, res) => {
-  res.render('addProduct', { title: 'Adicionar Produto' });
+  const user = req.user;
+  res.render('addProduct', { title: 'Adicionar Produto', user });
 };
 
 const renderEditProduct = async (req, res) => {
   try {
+    const user = req.user;
     const product = await Product.findById(req.params.id).lean();
     if (!product) {
       return res.status(404).send('Produto não encontrado');
     }
-    res.render('editProduct', { product, title: 'Editar Produto' });
+    res.render('editProduct', { product, title: 'Editar Produto', user });
   } catch (error) {
     res.status(500).send('Erro ao buscar produto');
   }

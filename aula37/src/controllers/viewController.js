@@ -45,7 +45,7 @@ const renderCarts = async (req, res) => {
     const user = req.user;
     const cart = await Cart.findOne({ user: userId }).populate('items.product');
     const isAdminOrPremium = user && (user.role === 'admin' || user.role === 'premium');
-    res.render('cart', { cart, title: 'Carrinho', user: user, isAdminOrPremium: isAdminOrPremium });
+    res.render('cart', { cart, title: 'Carrinho', user, isAdminOrPremium });
   } catch (error) {
     res.status(500).send('Erro ao buscar carrinho');
   }
