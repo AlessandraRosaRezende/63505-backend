@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(session({
   store: mongoStore.create({
-    mongoUrl: 'mongodb+srv://alessandra:coder@clustercoder.n6nab.mongodb.net/',
+    mongoUrl: 'MONGO_URI',
     ttl: 15,
   }),
   secret: 'CoderSecret',
@@ -33,7 +33,7 @@ app.use('/', viewRouter);
 app.use('/', userRouter);
 app.use('/', sessionRouter);
 
-mongoose.connect('mongodb+srv://alessandra:coder@clustercoder.n6nab.mongodb.net/')
+mongoose.connect('MONGO_URI')
   .then(() => console.log('Conectado ao MongoDB com sucesso'))
   .catch((error) => console.log('Erro ao conectar ao MongoDB: ' + error));
 
