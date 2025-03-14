@@ -4,7 +4,7 @@ const orderModel = require("./models/orders.model");
 let pizzaSize = "medium";
 
 const environment = async () => {
-  await mongoose.connect('mongodb+srv://alessandra:coder@clustercoder.n6nab.mongodb.net/?retryWrites=true&w=majority&appName=ClusterCoder');
+  await mongoose.connect('MONGO_URI');
   // await orderModel.insertMany(
   //   [
   //     {
