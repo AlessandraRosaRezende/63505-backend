@@ -40,7 +40,7 @@ app.use('/', sessionRouter);
 app.use('/', viewRouter);
 
 // Conexão com o MongoDB
-mongoose.connect('mongodb+srv://alessandra:coder@clustercoder.n6nab.mongodb.net/')
+mongoose.connect('MONGO_URI')
   .then(() => console.log('Conectado ao MongoDB com sucesso!'))
   .catch(error => console.log('Erro ao conectar ao MongoDB:', error));
 
