@@ -35,7 +35,7 @@ app.use("/session", sessionRouter);
 
 mongoose
   .connect(
-    "mongodb+srv://alessandra:coder@clustercoder.n6nab.mongodb.net/usersdb?retryWrites=true"
+    "MONGO_URI"
   )
   .catch((error) => {
     console.log(error);
