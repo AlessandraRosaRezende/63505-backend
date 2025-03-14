@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const studentModel = require("./models/students.model");
 
 const environment = async () => {
-  await mongoose.connect('mongodb+srv://alessandra:coder@clustercoder.n6nab.mongodb.net/?retryWrites=true&w=majority&appName=ClusterCoder');
+  await mongoose.connect('MONGO_URI');
   const result = await studentModel.insertMany([
     {
       first_name: "Joao",
