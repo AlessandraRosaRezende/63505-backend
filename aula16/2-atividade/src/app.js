@@ -3,7 +3,7 @@ const courseModel = require('./models/courses.model');
 const mongoose = require('mongoose');
 
 const environment = async () => {
-  await mongoose.connect('mongodb+srv://alessandra:coder@clustercoder.n6nab.mongodb.net/escola?retryWrites=true');
+  await mongoose.connect('MONGO_URI');
 
   // await studentModel.create({
   //   first_name: 'Maria',
