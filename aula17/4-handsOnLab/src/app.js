@@ -20,7 +20,7 @@ app.set('views', pathView);
 
 const connect = async () => {
   try {
-    await mongoose.connect('mongodb+srv://alessandra:coder@clustercoder.n6nab.mongodb.net/?retryWrites=true&w=majority&appName=ClusterCoder');
+    await mongoose.connect('MONGO_URI');
     console.log('Conectado ao MongoDB');
   } catch (err) {
     console.error('Erro ao conectar ao MongoDB:', err);
