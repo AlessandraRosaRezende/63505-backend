@@ -9,7 +9,7 @@ app.use(express.json());
 app.use('/alunos', alunosRouter);
 
 // conexão com o Mongo Atlas usando o mongoose
-mongoose.connect('mongodb+srv://alessandra:coder@clustercoder.n6nab.mongodb.net/escola') // informamos a database escola
+mongoose.connect('MONGO_URI') // informamos a database escola
   .then(() => {
     console.log('Conectado ao MongoDB com sucesso');
   }).catch((error) => {
