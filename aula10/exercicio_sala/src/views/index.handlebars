@@ -1,0 +1,28 @@
+<!-- Div que envolve todo o conteúdo do chat -->
+<div class="container">
+  <!-- Título do chat -->
+  <h2>Chat em Tempo Real</h2>
+
+  <!-- Campo de entrada de texto e botão de envio -->
+  <div class="input-group mt-3">
+    <input type="text" id="messageInput" class="form-control" placeholder="Digite sua mensagem...">
+    <div class="input-group-append">
+      <button id="sendMessageButton" class="btn btn-primary">Enviar</button>
+    </div>
+  </div>
+
+  <!-- Card para exibir as mensagens -->
+  <div class="card">
+    <div class="card-header">
+      Mensagens
+    </div>
+    <div class="card-body" id="messageCard">
+      <!-- Lista de mensagens -->
+      <ul id="messageList"></ul>
+    </div>
+  </div>
+</div>
+
+<!-- Inclusão do script do Socket.IO -->
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/index.js"></script>
