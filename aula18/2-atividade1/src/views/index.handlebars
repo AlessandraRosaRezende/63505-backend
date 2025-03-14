@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Form Cookie Coders</title>
+</head>
+
+<body>
+  <h1>Form Cookie Coders</h1>
+  <!-- Formulário para enviar dados para a rota '/cookie' via método POST -->
+  <form id="cookieForm">
+    <!-- Campo de entrada para o nome -->
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br>
+    <!-- Campo de entrada para o email -->
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br>
+    <!-- Botão de envio do formulário -->
+    <button type="button" id="submit">Submit</button>
+  </form>
+  <!-- Botão para obter o cookie -->
+  <button id="getCookie">GetCookie</button>
+
+  <!-- Script JavaScript para lidar com o envio e obtenção do cookie -->
+  <script>
+    document.getElementById('submit').addEventListener('click', function () {
+      // Obtém os valores dos campos de entrada
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+
+      // Envia uma requisição POST para criar o cookie
+      fetch('/cookie', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email })
+      })
+        .then(response => {
+          if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+          return response.text();
+        })
+        .then(data => console.log(data))
+        .catch(error => console.error('Erro ao definir cookie:', error));
+    });
+
+    // Event listener para o botão 'getCookie'
+    document.getElementById('getCookie').addEventListener('click', function () {
+      // Requisição fetch para obter o cookie da rota '/getCookie'
+      fetch('/getCookie')
+        .then(response => {
+          if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+          return response.json();
+        })
+        .then(data => console.log(data))
+        .catch(error => console.error('Erro ao buscar cookie:', error));
+    });
+  </script>
+</body>
+
+</html>

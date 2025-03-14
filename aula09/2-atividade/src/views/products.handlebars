@@ -1,0 +1,16 @@
+<div>
+  <title>Produtos</title>
+  <h1>Hello, {{usuario.nome}} - {{usuario.role}}</h1>
+  <p>Essa é a utilização do css</p>
+  {{#if isAdmin}}
+    <h2>Produtos:</h2>
+      {{#each food}}
+        <ul>
+          <li><strong>Nome:</strong> {{this.name}}</li>
+          <li><strong>Preço:</strong> {{this.price}}</li>
+        </ul>
+      {{/each}}
+  {{else}}
+    <h2>Você não tem permissão para acessar a lista de produtos</h2>
+  {{/if}}
+</div>
