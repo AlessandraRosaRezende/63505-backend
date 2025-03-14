@@ -22,7 +22,7 @@ app.use('/public', express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(session({
   store: MongoStore.create({
-    mongoUrl: 'mongodb+srv://alessandra:coder@clustercoder.n6nab.mongodb.net/',
+    mongoUrl: 'MONGO_URI',
     ttl: 15
   }),
   secret: 'Cod3r',
