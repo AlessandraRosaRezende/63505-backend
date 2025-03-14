@@ -11,7 +11,7 @@ const app = express();
 app.use(cookieParser());
 app.use(session({
   store: mongoStore.create({ 
-    mongoUrl: 'mongodb+srv://alessandra:coder@clustercoder.n6nab.mongodb.net/',
+    mongoUrl: 'MONGO_URI',
     collectionName: 'sessions',
     ttl: 15,
   }),
