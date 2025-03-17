@@ -1,0 +1,57 @@
+<h1>Lista de Usuários:</h1>
+<ul>
+  {{#each users}}
+  <div style="margin-bottom: 20px; display: flex; align-items: center;">
+    <!-- Exibição do avatar -->
+    <div style="margin-right: 10px;">
+      <img src="{{avatar}}" alt="Avatar de {{first_name}}" width="50" height="50" style="border-radius: 50%;">
+    </div>
+
+    <!-- Informações do usuário -->
+    <li>
+      <strong>{{first_name}} {{last_name}}</strong> - {{email}}
+    </li>
+
+    <!-- Botões de ação -->
+    <div style="margin-left: 10px;">
+      <button class="edit-button" data-id="{{_id}}">Editar</button>
+      <button class="delete-button" data-id="{{_id}}">Deletar</button>
+    </div>
+  </div>
+  {{/each}}
+</ul>
+
+<script>
+  const editButtons = document.querySelectorAll('.edit-button');
+  const deleteButtons = document.querySelectorAll('.delete-button');
+
+  editButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const userId = button.getAttribute('data-id');
+      window.location.href = `/update/${userId}`;
+    });
+  });
+
+  deleteButtons.forEach(button => {
+    button.addEventListener('click', async () => {
+      const userId = button.getAttribute('data-id');
+      try {
+        const response = await fetch(`/user/${userId}`, {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          alert('Usuário deletado com sucesso');
+          window.location.reload(); // Atualiza a página
+        } else {
+          alert('Erro ao deletar usuário');
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    });
+  });
+</script>
