@@ -1,0 +1,181 @@
+openapi: 3.0.1
+info:
+  title: API de adoção de pets
+  version: "1.0"
+servers:
+  - url: http://localhost:8080
+paths:
+  /api/pets:
+    get:
+      summary: Listar todos os pets
+      tags:
+        - Pets
+      responses:
+        "200":
+          description: Os pets foram encontrados
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Pet'
+        "500":
+          description: Erro interno do servidor
+    post:
+      summary: Cria um novo pet
+      tags:
+        - Pets
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PetInput'
+      responses:
+        "201":
+          description: Pet criado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pet'
+        "400":
+          description: Erro de validação
+  /api/pets/{uuid}:
+    get:
+      summary: Obter um pet por UUID
+      tags:
+        - Pets
+      parameters:
+        - name: uuid
+          in: path
+          description: UUID do pet
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Pet encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pet'
+        "404":
+          description: Pet não encontrado
+        "500":
+          description: Erro interno do servidor
+    put:
+      summary: Atualizar um pet por UUID
+      tags:
+        - Pets
+      parameters:
+        - name: uuid
+          in: path
+          description: UUID do pet
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PetInput'
+      responses:
+        "200":
+          description: Pet atualizado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pet'
+        "400":
+          description: Erro de validação
+        "404":
+          description: Pet não encontrado
+        "500":
+          description: Erro interno do servidor
+    delete:
+      summary: Deletar um pet por UUID
+      tags:
+        - Pets
+      parameters:
+        - name: uuid
+          in: path
+          description: UUID do pet
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: Pet deletado com sucesso
+        "404":
+          description: Pet não encontrado
+        "500":
+          description: Erro interno do servidor
+components:
+  schemas:
+    Pet:
+      type: object
+      description: Esquema completo do pet, incluindo o ID gerado pelo MongoDB.
+      properties:
+        _id:
+          type: string
+          description: ID autogerado no MongoDB
+        name:
+          type: string
+          description: Nome do pet
+        specie:
+          type: string
+          description: Espécie do pet
+        birthDate:
+          type: string
+          format: date
+          description: Data de nascimento do pet
+        adopted:
+          type: boolean
+          default: false
+          description: Indica se o pet foi adotado
+        owner:
+          type: string
+          description: ID do dono do pet
+        image:
+          type: string
+          description: URL da foto do pet
+      example:
+        _id: "5f9b9b9b9b9b9b9b9b9b9b9b"
+        name: Aquiles
+        specie: Cachorro
+        birthDate: 2022-12-30
+        adopted: false
+        owner: "5f9b9b9b9b9b9b9b9b9b9b9"
+        image: https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
+    PetInput:
+      type: object
+      description: Esquema de entrada para criar ou atualizar um pet, sem o ID gerado pelo MongoDB.
+      properties:
+        name:
+          type: string
+          description: Nome do pet
+        specie:
+          type: string
+          description: Espécie do pet
+        birthDate:
+          type: string
+          format: date
+          description: Data de nascimento do pet
+        adopted:
+          type: boolean
+          default: false
+          description: Indica se o pet foi adotado
+        owner:
+          type: string
+          description: ID do dono do pet
+        image:
+          type: string
+          description: URL da foto do pet
+      example:
+        name: Aquiles
+        specie: Cachorro
+        birthDate: 2022-12-30
+        adopted: false
+        owner: "5f9b9b9b9b9b9b9b9b9b9b9"
+        image: https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
