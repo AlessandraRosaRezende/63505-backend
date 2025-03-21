@@ -1,0 +1,62 @@
+<nav>
+  <a href="/home">Home</a>
+  <a href="/register">Register</a>
+  <a href="/list">User list</a>
+    <a href="/user/logout">Logout</a>
+</nav>
+  {{#if isAdmin}}
+<h1>Edit Form</h1>
+
+<form id="form">
+  <label for="first_name">First Name:</label>
+  <input type="text" id="first_name" name="first_name" value="{{user.first_name}}" required>
+  <br>
+  <label for="last_name">Last Name:</label>
+  <input type="text" id="last_name" name="last_name" value="{{user.last_name}}" required>
+  <br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" value="{{user.email}}" required>
+  <br>
+  
+  <br>
+  <button class="edit-button" data-email="{{user.email}}" data-id="{{user._id}}">Update</button>
+</form>
+  {{else}}
+   <div></div>
+    <h3>{{userLogged.first_name}}, sua permissão não é admin.</h3>
+
+  </div>
+
+   {{/if}}
+
+<script>
+  console.log('edit page');
+
+  const editButtons = document.querySelectorAll('.edit-button');
+
+  editButtons.forEach(button => {
+    button.addEventListener('click', async () => {
+      const userId = button.getAttribute('data-id');
+      await editaUsuario(userId);
+      console.log('userId', userId);
+      window.location.href = `/list`;
+    });
+  });
+
+  async function editaUsuario(id) {
+    try {
+      var form = new FormData(document.getElementById("form"));
+      console.log('form', form);
+      const response = await fetch(`/user/${id}`, {
+        method: 'put',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(Object.fromEntries(form))
+      });
+    } catch (error) {
+      console.error('Erro na solicitação de exclusão:', error);
+      // Exibir mensagem de erro ou realizar outra ação apropriada
+    }
+  }
+</script>

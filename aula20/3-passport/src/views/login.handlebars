@@ -1,0 +1,45 @@
+<div class="welcome-message">Bem Vindo! Faça login para continuar.</div>
+<div class="login-container">
+  <div class=" login-card">
+    <h1>Login</h1>
+    <form action="/login" method="POST">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br>
+      <label for="senha">Senha:</label>
+      <input type="password" id="password" name="password" required><br>
+      <button type="submit">Entrar</button>
+      <a href="/reset-password">Redefinir senha</a>
+    </form>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+  // Captura a query string
+  const params = new URLSearchParams(window.location.search);
+
+  // Verifica se existe o parâmetro 'message'
+  if (params.has('message')) {
+    console.log(params.get('message'));
+    // Obtém o valor de 'message'
+    const message = params.get('message');
+
+    // Exibe o alerta com SweetAlert
+    {{!-- Swal.fire({
+      icon: message === 'Usuário cadastrado com sucesso' || message === 'Senha alterada com sucesso' ? 'success' : 'error',
+      title: message === 'Usuário cadastrado com sucesso' || message === 'Senha alterada com sucesso' ? 'Sucesso' : 'Erro',
+      text: message,
+      confirmButtonText: 'OK'
+    }); --}}
+
+    Swal.fire({
+      icon: ['Usuário registrado com sucesso', 'Senha redefinida com sucesso'].includes(message) ? 'success' : 'error',
+      title: ['Usuário registrado com sucesso', 'Senha redefinida com sucesso'].includes(message) ? 'Sucesso' : 'Erro',
+      text: message,
+      confirmButtonText: 'OK'
+    });
+
+    // Remove o parâmetro da URL para evitar re-exibição
+    const newUrl = window.location.pathname;
+    window.history.replaceState({}, document.title, newUrl);
+  }
+</script>
