@@ -38,16 +38,26 @@ export class ProductsController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.productsService.findOne(+id);
+    if (isNaN(+id)) {
+      throw new HttpException('Invalid Param', HttpStatus.BAD_REQUEST);
+    }
+    const product = this.productsService.findOne(+id);
+    return { status: 'success', product };
   }
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateProductDto: UpdateProductDto) {
+    if (isNaN(+id)) {
+      throw new HttpException('Invalid Param', HttpStatus.BAD_REQUEST);
+    }
     return this.productsService.update(+id, updateProductDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
+    if (isNaN(+id)) {
+      throw new HttpException('Invalid Param', HttpStatus.BAD_REQUEST);
+    }
     return this.productsService.remove(+id);
   }
 }

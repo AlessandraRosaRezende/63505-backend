@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
 import { Product } from './entities/product.entity';
@@ -24,14 +24,22 @@ export class ProductsService {
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} product`;
+    const product = this.products.find((u) => u.id === id);
+    if (!product)
+      throw new HttpException('Product not Found', HttpStatus.NOT_FOUND);
+    return product;
   }
 
   update(id: number, updateProductDto: UpdateProductDto) {
-    return `This action updates a #${id} product`;
+    const product = this.findOne(id);
+    const index = this.products.indexOf(product);
+    this.products[index] = { ...product, ...updateProductDto };
+    return this.products[index];
   }
 
   remove(id: number) {
-    return `This action removes a #${id} product`;
+    this.products = this.products.filter((u) => u.id !== id);
+
+    return this.products;
   }
 }
