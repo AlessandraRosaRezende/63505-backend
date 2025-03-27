@@ -1,0 +1,54 @@
+<h1>Carrinho de Compras</h1>
+{{#if cart}}
+<table>
+  <thead>
+    <tr>
+      <th>Nome do Produto</th>
+      <th>Quantidade</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each cart.items}}
+    <tr>
+      <td>{{this.product.name}}</td>
+      <td>
+        <span id="quantity-{{this.product._id}}">{{this.quantity}}</span>
+        <button onclick="showQuantityInput('{{this.product._id}}')">Atualizar Quantidade</button>
+        <form id="update-quantity-form-{{this.product._id}}" action="/cart/update-quantity" method="post"
+          style="display: none;">
+          <input type="hidden" name="productId" value="{{this.product._id}}">
+          <input type="number" name="quantity" value="{{this.quantity}}" min="1">
+          <button type="submit" onclick="showSuccessMessage('{{this.product._id}}')">Confirmar</button>
+        </form>
+        <p id="success-message-{{this.product._id}}" style="color: green; display: none;">Quantidade atualizada!</p>
+      </td>
+      <td>
+        <form action="/cart/remove" method="post">
+          <input type="hidden" name="productId" value="{{this.product._id}}">
+          <button type="submit">Remover</button>
+        </form>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{else}}
+<p>Seu carrinho está vazio.</p>
+{{/if}}
+
+<script>
+  function showQuantityInput(productId) {
+    document.getElementById('quantity-' + productId).style.display = 'none';
+    document.querySelector('#update-quantity-form-' + productId).style.display = 'inline';
+  }
+
+  function showSuccessMessage(productId) {
+    setTimeout(function () {
+      document.getElementById('success-message-' + productId).style.display = 'block';
+      document.getElementById('quantity-' + productId).style.display = 'inline';
+      document.querySelector('#update-quantity-form-' + productId).style.display = 'none';
+      document.getElementById('success-message-' + productId).style.display = 'none';
+    }, 1000); // 1 segundo
+  }
+</script>

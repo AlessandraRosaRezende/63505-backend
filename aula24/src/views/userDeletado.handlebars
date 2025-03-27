@@ -1,0 +1,18 @@
+<nav>
+  <a href="/home">Home</a>
+  <a href="/register">Register</a>
+  <a href="/list">User list</a>
+    <a href="/user/logout">Logout</a>
+</nav>
+<div>
+    {{#if isAdmin}}
+      <h1>INFO</h1>
+      <h3>Usuario {{email}} Deletado com Sucesso!! </h3>
+      {{else}}
+      <div></div>
+      <h3>{{userLogged.first_name}}, sua permissão não é admin.</h3>
+      
+      </div>
+      
+      {{/if}}
+</div>

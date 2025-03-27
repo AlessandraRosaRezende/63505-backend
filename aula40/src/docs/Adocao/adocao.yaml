@@ -1,0 +1,121 @@
+openapi: 3.0.1
+info:
+  title: API de Adoções de Pets
+  version: "1.0"
+servers:
+  - url: http://localhost:8080
+paths:
+  /api/adoptions:
+    get:
+      summary: Listar todas as adoções
+      tags:
+        - Adoptions
+      responses:
+        "200":
+          description: Adoções encontradas com sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Adoption'
+        "500":
+          description: Erro interno do servidor
+  /api/adoptions/{aid}:
+    get:
+      summary: Obter uma adoção por ID
+      tags:
+        - Adoptions
+      parameters:
+        - name: aid
+          in: path
+          description: ID da adoção
+          required: true
+          schema:
+            type: string
+            format: objectId
+      responses:
+        "200":
+          description: Adoção encontrada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Adoption'
+        "404":
+          description: Adoção não encontrada
+        "500":
+          description: Erro interno do servidor
+  /api/adoptions/{uid}/{pid}:
+    post:
+      summary: Criar uma nova adoção
+      tags:
+        - Adoptions
+      parameters:
+        - name: uid
+          in: path
+          description: ID do usuário
+          required: true
+          schema:
+            type: string
+            format: objectId
+        - name: pid
+          in: path
+          description: ID do pet
+          required: true
+          schema:
+            type: string
+            format: objectId
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AdoptionInput'
+      responses:
+        "201":
+          description: Adoção criada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Adoption'
+        "400":
+          description: Erro de validação
+        "500":
+          description: Erro interno do servidor
+components:
+  schemas:
+    Adoption:
+      type: object
+      description: Esquema completo da adoção, incluindo o ID gerado pelo MongoDB.
+      properties:
+        _id:
+          type: string
+          format: objectId
+          description: ID autogerado no MongoDB
+        owner:
+          type: string
+          format: objectId
+          description: ID do usuário que adotou o pet
+        pet:
+          type: string
+          format: objectId
+          description: ID do pet adotado
+      example:
+        _id: "65f01234567890abcdef1234"
+        owner: "65e09876543210fedcba9876"
+        pet: "65d01234567890abcdef9876"
+    AdoptionInput:
+      type: object
+      description: Esquema de entrada para criar uma adoção, sem o ID gerado pelo MongoDB.
+      properties:
+        owner:
+          type: string
+          format: objectId
+          description: ID do usuário que adotou o pet
+        pet:
+          type: string
+          format: objectId
+          description: ID do pet adotado
+      example:
+        owner: "65e09876543210fedcba9876"
+        pet: "65d01234567890abcdef9876"
