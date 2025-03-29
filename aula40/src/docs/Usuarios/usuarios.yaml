@@ -1,0 +1,163 @@
+openapi: 3.0.1
+info:
+  title: API de adoção de pets
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+paths:
+  /api/users:
+    get:
+      summary: Obter todos os usuários
+      tags:
+        - Users
+      responses:
+        '200':
+          description: Usuários obtidos com sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+        '500':
+          description: Erro ao obter os usuários
+    post:
+      summary: Cria um novo usuário
+      tags:
+        - Users
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserInput'
+      responses:
+        "201":
+          description: Usuário criado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        "400":
+          description: Erro de validação
+  /api/users/{uuid}:
+    get:
+      summary: Obter um usuário por UUID
+      tags:
+        - Users
+      parameters:
+        - name: uuid
+          in: path
+          description: UUID do usuário
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Usuário encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        "404":
+          description: Usuário não encontrado
+        "500":
+          description: Erro interno do servidor
+    put:
+      summary: Atualizar um usuário por UUID
+      tags:
+        - Users
+      parameters:
+        - name: uuid
+          in: path
+          description: UUID do usuário
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserInput'
+      responses:
+        "200":
+          description: Usuário atualizado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        "400":
+          description: Erro de validação
+        "404":
+          description: Usuário não encontrado
+        "500":
+          description: Erro interno do servidor
+    delete:
+      summary: Deletar um usuário por UUID
+      tags:
+        - Users
+      parameters:
+        - name: uuid
+          in: path
+          description: UUID do usuário
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: Usuário deletado com sucesso
+        "404":
+          description: Usuário não encontrado
+        "500":
+          description: Erro interno do servidor
+components:
+  schemas:
+    User:
+      type: object
+      description: Esquema completo do usuário, incluindo o ID gerado pelo MongoDB.
+      properties:
+        _id:
+          type: string
+          description: ID do usuário, gerado pelo MongoDB
+        first_name:
+          type: string
+          description: Primeiro nome do usuário
+        last_name:
+          type: string
+          description: Último nome do usuário
+        email:
+          type: string
+          description: E-mail do usuário
+        password:
+          type: string
+          description: Senha do usuário
+        role:
+          type: string
+          description: Papel do usuário
+          default: "user"
+        pets:
+          type: array
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: ID do pet, gerado pelo MongoDB
+          default: []  
+      example:
+        _id: "5f9b9b9b9b9b9b9b9b9b9b9b"
+        first_name: "João"
+        last_name: "Silva"
+        email: "joao.silva@email.com"
+        password: "123456"
+        role: "user"
+        pets:
+          - _id: "65f01234567890abcdef1234"
+    UserInput:
+      type: object
+      description: Esquema de entrada para criar ou atualizar um usuário, sem o ID gerado pelo MongoDB.
+      properties:
+        first_name:
+          type: string
+          description: Primeiro nome

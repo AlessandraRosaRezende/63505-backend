@@ -1,0 +1,15 @@
+<nav>
+  <a href="/">Home</a>
+  {{#if user}}
+    <a href="/profile">Perfil</a>
+    <a href="/products">Produtos</a>
+    <a href="/cart">Carrinho</a>
+  {{#if (eq user.role 'admin')}}
+    <a href="/users">Lista de Usuários</a>
+  {{/if}}
+    <a href="/auth/logout">Logout</a>
+  {{else}}
+    <a href="/login">Login</a>
+    <a href="/register">Registrar</a>
+  {{/if}}
+</nav>

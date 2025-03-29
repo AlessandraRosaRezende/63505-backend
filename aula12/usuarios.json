@@ -1,0 +1,16 @@
+[
+  {
+    "nome": "Alessandra",
+    "imagem": "Bob.webp"
+  },
+  {
+    "nome": "Alessandra",
+    "sobrenome": "Rezende",
+    "imagem": "Bob.webp"
+  },
+  {
+    "nome": "João",
+    "sobrenome": "José",
+    "imagem": "spongebob-squarepants.gif"
+  }
+]
