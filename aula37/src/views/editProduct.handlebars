@@ -1,0 +1,6 @@
+<h1>Editar Produto</h1>
+<form action="/products/{{product._id}}?_method=PUT" method="post">
+  <input type="text" name="name" placeholder="Nome do Produto" value="{{product.name}}" required>
+  <input type="number" name="price" placeholder="Preço" value="{{product.price}}" required>
+  <button type="submit">Salvar</button>
+</form>

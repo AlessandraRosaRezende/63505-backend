@@ -1,0 +1,73 @@
+<nav>
+  <a href="/home">Home</a>
+  <a href="/register">Register</a>
+  <a href="/list">User list</a>
+  <a href="/user/logout">Logout</a>
+</nav>
+<div class="list">
+  <h1>Lista de Usuários</h1>
+  {{#if isAdmin}}
+  <ul>
+    {{#each users}}
+    <div>
+      <li>{{first_name}} {{last_name}} {{email}} | {{role}}</li>
+      <button class="delete-button" data-email="{{email}}">Deletar</button>
+      <button class="edit-button" data-email="{{email}}" data-id="{{_id}}">Editar</button>
+
+    </div>
+    {{/each}}
+  </ul>
+  {{else}}
+  {{#each users}}
+  <div>
+    <li>{{first_name}} {{last_name}} {{email}} | {{role}}</li>
+
+  </div>
+  {{/each}}
+  {{/if}}
+</div>
+
+<script>
+  console.log('list page');
+  const deleteButtons = document.querySelectorAll('.delete-button');
+  const editButtons = document.querySelectorAll('.edit-button');
+
+  deleteButtons.forEach(button => {
+    button.addEventListener('click', async () => {
+      const userEmail = button.getAttribute('data-email');
+      await deleteUsuario(userEmail);
+    });
+  });
+
+  editButtons.forEach(button => {
+    button.addEventListener('click', async () => {
+      const userId = button.getAttribute('data-id');
+      console.log('userId', userId);
+      window.location.href = `/edit/${userId}`;
+    });
+  });
+
+  async function deleteUsuario(email) {
+    try {
+      const response = await fetch(`/user/${email}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        console.log(`Usuário com email ${email} deletado com sucesso.`);
+
+        // Redirecionar para a página que exibe o e-mail deletado
+        window.location.href = `/usuario-deletado/${email}`;
+      } else {
+        console.error(`Erro ao excluir usuário. Status: ${response.status}`);
+        // Exibir mensagem de erro ou realizar outra ação apropriada
+      }
+    } catch (error) {
+      console.error('Erro na solicitação de exclusão:', error);
+      // Exibir mensagem de erro ou realizar outra ação apropriada
+    }
+  }
+</script>

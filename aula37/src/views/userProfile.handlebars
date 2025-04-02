@@ -1,0 +1,16 @@
+<h1>Perfil do Usuário</h1>
+<p>Nome: {{user.name}}</p>
+<p>Email: {{user.email}}</p>
+<p>Função: {{user.role}}</p>
+
+{{#if isAdmin}}
+<form action="/users/premium/{{user._id}}?_method=PUT" method="post">
+  <button type="submit">
+    {{#if (eq user.role 'user')}}
+    Tornar Premium
+    {{else}}
+    Tornar Usuário
+    {{/if}}
+  </button>
+</form>
+{{/if}}
