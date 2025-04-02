@@ -1,8 +1,11 @@
 import { Module } from '@nestjs/common';
 import { MulterModule } from '@nestjs/platform-express';
-import { multerConfig } from './multer.config';
 
 @Module({
-  imports: [MulterModule.register(multerConfig)],
+  imports: [
+    MulterModule.register({
+      dest: './uploads', // Diretório onde os arquivos serão salvos
+    }),
+  ],
 })
 export class MulterConfigModule {}
