@@ -1,12 +1,12 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import * as serveStatic from 'serve-static';
-import { join } from 'path';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { json, urlencoded } from 'express';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  app.use('/uploads', serveStatic(join(__dirname, '..', 'uploads')));
+  app.use(json({ limit: '50mb' })); // Configure o limite do json
+  app.use(urlencoded({ extended: true, limit: '50mb' })); // Configure o limite do urlencoded
 
   const config = new DocumentBuilder()
     .setTitle('API Example')
